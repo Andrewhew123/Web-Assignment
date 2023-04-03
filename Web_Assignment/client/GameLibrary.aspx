@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="ClientMaster.Master" AutoEventWireup="true" CodeBehind="Payment.aspx.cs" Inherits="Web_Assignment.client.Payment" %>
+﻿<%@ Page Language="C#" MasterPageFile="ClientMaster.Master" AutoEventWireup="true" CodeBehind="GameLibrary.aspx.cs" Inherits="Web_Assignment.client.GameLibrary" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="GameLibrary" runat="Server">
 
@@ -30,7 +30,6 @@
 
         <div class="row">
 
-
             <!---------- Game ---------->
             <div class="col-md-3 colGame">
 
@@ -41,9 +40,16 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <asp:Button ID="btnPlay" runat="server" Text="Play" CssClass="btn btn-info"/>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
+                        <asp:Button ID="Button8" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButtonReview" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton8" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
@@ -60,9 +66,16 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button1" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton17" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton7" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
@@ -79,9 +92,16 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button2" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton18" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton6" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
@@ -98,15 +118,21 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button3" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton19" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton5" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
             </div>
             <!---------- Game ---------->
-
 
 
             <!---------------------------------------------------------------->
@@ -122,9 +148,16 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button4" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton1" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
@@ -141,9 +174,16 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button5" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton2" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
@@ -160,14 +200,22 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button6" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton3" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton3" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
             </div>
             <!---------- Game ---------->
+
 
              <!---------- Game ---------->
             <div class="col-md-3 colGame">
@@ -179,23 +227,74 @@
                         <h5 class="card-title">Dead Space</h5>
                         <hr />
                         <p class="card-text" style="font-size: 12px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                        <label style="font-size: 14px;">Genres: </label>
+                        <label class="card-text" style="font-size: 13px;">Survival</label>
+
+                        <br />
+
                         <asp:Button ID="Button7" runat="server" Text="Play" CssClass="btn btn-info"/>
                         &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton4" runat="server" style="color: white; font-size: 15px;">Review</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton4" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        
                     </div>
                 </div>
 
             </div>
             <!---------- Game ---------->
-                
-
-
+  
         </div>
 
+    </div>
+
+    <!---------- The Modal ---------->
+    <div id="reviewModal" class="modal modalShadowReview" runat="server">
+	    <div class="modalReview">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Dead Space Review</h4>
+
+                <asp:LinkButton ID="LinkButtonClose" runat="server" CssClass="close btnCloseReview" style="text-decoration: none;" onclick="btnCloseReview_Click">
+                    <span aria-hidden="true">&times;</span>
+                </asp:LinkButton>
+
+            </div>
+
+            <div class="modal-body" style="color: black; text-align: left;">
+
+                <div class="form-group">
+                    <label>Rating Star</label>
+                    
+                    <select id="reviewRating" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+
+                    <small class="form-text text-muted">From worst to best rating in the range from 1 to 5</small>
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                    <label>Comment</label>
+                    <textarea id="txtReviewComment" cols="20" rows="2" class="form-control" runat="server"></textarea>
+
+                </div>
+
+                <br />
+
+                <asp:Button ID="btnSubmitReview" runat="server" Text="Submit" CssClass="btn btn-success btn-block" />
+   
+
+            </div>
+                    
+        </div>
 
     </div>
+    <!---------- The Modal ---------->
+
 </asp:Content>
-
-
-        
 

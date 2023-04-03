@@ -13,5 +13,25 @@ namespace Web_Assignment.client
         {
 
         }
+
+        protected void LinkButtonEditReview_Click(object sender, EventArgs e)
+        {
+            reviewModal.Style.Add("display", "block");
+        }
+
+        protected void LinkButtonClose_Click(object sender, EventArgs e)
+        {
+            reviewModal.Style.Add("display", "none");
+        }
+
+        protected void btnCloseReview_Click(Object sender, EventArgs e)
+        {
+            reviewModal.Style.Add("display", "none");
+        }
+
+        private void resetTextField()
+        {
+           
+        }
     }
 }
