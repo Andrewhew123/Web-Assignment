@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Galaxy
+namespace Web_Assignment.client
 {
 
 
-    public partial class Product
+    public partial class Payment
     {
     }
 }

@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Payment.aspx" />
+    <Content Include="client\Product.aspx" />
     <Content Include="css\header.css" />
     <Content Include="css\payment.css" />
     <Content Include="img\header\cart.png" />
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="client\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
