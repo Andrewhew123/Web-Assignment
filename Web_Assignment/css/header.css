@@ -1,0 +1,50 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Monserrat", sans-serif;
+
+}
+
+span {
+    font-weight: bold;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-bottom: 20px;
+    padding-right: 5%;
+}
+
+.logoname {
+    margin-left: -140px;
+    font-weight: bolder;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+div.main img {
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    
+}
