@@ -351,3 +351,54 @@ small {
     border-radius: 5px 5px 5px 5px;
 }
 
+
+/***** Review *****/
+.modalShadowReview {
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalReview {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #888;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: fadeUp_modalbox;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaaaaa;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.btnCloseReview {
+    border: 0px;
+    background-color: white;
+}
+
+
+
