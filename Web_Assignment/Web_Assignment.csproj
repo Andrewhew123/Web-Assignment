@@ -72,10 +72,17 @@
     <Content Include="client\Product.aspx" />
     <Content Include="css\header.css" />
     <Content Include="css\payment.css" />
+    <Content Include="img\bg-image.jpg" />
     <Content Include="img\header\cart.png" />
     <Content Include="img\header\user.png" />
     <Content Include="img\logo.png" />
+    <Content Include="img\mh.jpg" />
     <Content Include="img\product\dead_space.jpg" />
+    <Content Include="img\user.png" />
+    <Content Include="img\wy.jpeg" />
+    <Content Include="obj\Debug\Web_Assignment.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Web_Assignment.dll" />
+    <Content Include="obj\Debug\Web_Assignment.pdb" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,10 +114,16 @@
     <Compile Include="client\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="client\ClientMaster.Master" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Web_Assignment.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Web_Assignment.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Web_Assignment.csproj.CoreCompileInputs.cache" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -119,7 +132,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

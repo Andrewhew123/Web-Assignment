@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <a class="btn btn-ghost normal-case text-xl">
-                        <img src="img/logo.png" height="50px" width="50px">
+                        <img src="../img/logo.png" height="50px" width="50px">
                         &nbsp; Galaxy</a>
                 </div>
             </div>
@@ -103,7 +103,7 @@
             </div>
         </div>
     </div>
-    <div class="hero min-h-screen" style="background-image: url(img/bg-image.jpg);">
+    <div class="hero min-h-screen" style="background-image: url(../img/bg-image.jpg);">
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md">
@@ -121,7 +121,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -136,7 +136,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -151,7 +151,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -166,7 +166,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -181,7 +181,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -195,7 +195,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -210,7 +210,7 @@
             <div class="carousel-item">
                 <div class="card w-96 glass">
                     <figure>
-                        <img src="img/mh.jpg" alt="Monster Hunter" />
+                        <img src="../img/mh.jpg" alt="Monster Hunter" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Monster Hunter: World</h2>
@@ -225,7 +225,7 @@
         <div>
             <div class="m-auto card lg:card-side bg-zinc-900 shadow-xl outline p-5 w-11/12">
                 <figure>
-                    <img src="img/mh.jpg" class="h-80" alt="Album" /></figure>
+                    <img src="../img/mh.jpg" class="h-80" alt="Album" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">New Game Announced!</h2>
                     <p>Legendary developer Lee Wee Yan has announced the developement of a new, cutting-edge game!</p>
