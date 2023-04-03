@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Galaxy
+namespace Web_Assignment.client
 {
     public partial class Product : System.Web.UI.Page
     {
