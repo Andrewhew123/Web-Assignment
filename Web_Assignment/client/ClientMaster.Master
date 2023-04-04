@@ -45,6 +45,8 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"></asp:Menu>
                 
                 <div class="main">
                     <a href="#" class="cart"><img src="../img/header/cart.png" alt="cart" href="#"></a>
