@@ -68,8 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="client\GameLibrary.aspx" />
+    <Content Include="client\Home.aspx" />
     <Content Include="client\Payment.aspx" />
-    <Content Include="client\Product.aspx" />
     <Content Include="css\header.css" />
     <Content Include="css\payment.css" />
     <Content Include="img\bg-image.jpg" />
@@ -100,18 +100,19 @@
     <Compile Include="client\GameLibrary.aspx.designer.cs">
       <DependentUpon>GameLibrary.aspx</DependentUpon>
     </Compile>
+    <Compile Include="client\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="client\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="client\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="client\Product.aspx.cs">
-      <DependentUpon>Product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="client\Product.aspx.designer.cs">
-      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Web_Assignment/client/Product.aspx
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Web_Assignment.client.Product" %>
-=======
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Web_Assignment.client.Home" %>
->>>>>>> be43442990bf2cda863e365b2a9756ee86fd2e7c:Web_Assignment/client/Home.aspx
 
 <!DOCTYPE html>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
@@ -20,7 +16,7 @@
 
 </head>
 
-<body>
+<body class="text-white">
     <div>
         <div class="navbar bg-black">
             <div class="navbar-start">
