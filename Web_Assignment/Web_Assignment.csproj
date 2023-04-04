@@ -67,15 +67,23 @@
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\Payment.aspx" />
+    <Content Include="client\Product.aspx" />
     <Content Include="css\header.css" />
     <Content Include="css\payment.css" />
     <Content Include="img\bg-image.jpg" />
+    <Content Include="img\firewatch2.jpg" />
+    <Content Include="img\firewatch1.png" />
     <Content Include="img\header\cart.png" />
     <Content Include="img\header\user.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\mh.jpg" />
+    <Content Include="img\mh2.jpg" />
+    <Content Include="img\mh3.jpg" />
+    <Content Include="img\mh4.jpg" />
+    <Content Include="img\mhlogo.png" />
     <Content Include="img\product\dead_space.jpg" />
     <Content Include="img\user.png" />
+    <Content Include="img\firewatch3.jpg" />
     <Content Include="img\wy.jpeg" />
     <Content Include="obj\Debug\Web_Assignment.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Web_Assignment.dll" />
@@ -110,6 +118,13 @@
     </Compile>
     <Compile Include="client\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
