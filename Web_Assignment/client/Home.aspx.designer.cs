@@ -11,7 +11,7 @@ namespace Web_Assignment.client
 {
 
 
-    public partial class Product
+    public partial class Home
     {
     }
 }

@@ -36,7 +36,7 @@
         <div class="hero">
             <nav class="nav">
                 
-                <a href="home.html" class="logo"><img src="../img/logo.png" alt="logo"></a>
+                <a href="home.html" class="logo"><img src="../img/logo.png" alt="logo" style="width: 50px; height: 50px;"></a>
                 <a href="home.html" class="logoname">Galaxy</a>
                 <ul>
                     <li><a href="#">Home</a></li>
