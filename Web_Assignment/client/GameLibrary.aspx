@@ -248,8 +248,8 @@
     </div>
 
     <!---------- The Modal ---------->
-    <div id="reviewModal" class="modal modalShadowReview" runat="server">
-	    <div class="modalReview">
+    <div id="reviewModal" class="modal modalShadowReviews" runat="server">
+	    <div class="modalReviews">
 
             <div class="modal-header">
                 <h4 class="modal-title">Dead Space Review</h4>

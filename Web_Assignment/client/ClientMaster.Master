@@ -9,7 +9,7 @@
     </asp:ContentPlaceHolder>
 
     <!---------- Link to payment CSS ---------->
-    <link href="../../css/payment.css" rel="stylesheet" type="text/css" />
+    <link href="../css/payment.css" rel="stylesheet" type="text/css" />
 
     <!---------- Link to header CSS ---------->
     <link href="../../css/header.css" rel="stylesheet" type="text/css" />

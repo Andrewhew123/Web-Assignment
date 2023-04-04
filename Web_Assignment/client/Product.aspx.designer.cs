@@ -11,7 +11,7 @@ namespace Web_Assignment.client
 {
 
 
-    public partial class Payment
+    public partial class Product
     {
     }
 }
