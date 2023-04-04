@@ -109,7 +109,6 @@
     </Compile>
     <Compile Include="client\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="client\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
