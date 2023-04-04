@@ -13,5 +13,6 @@ namespace Web_Assignment.client
 
     public partial class Home
     {
+
     }
 }
