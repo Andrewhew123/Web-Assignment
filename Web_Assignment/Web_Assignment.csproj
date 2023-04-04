@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="client\GameLibrary.aspx" />
-    <Content Include="client\Header.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\Payment.aspx" />
     <Content Include="css\header.css" />
@@ -97,13 +96,6 @@
     </Compile>
     <Compile Include="client\GameLibrary.aspx.designer.cs">
       <DependentUpon>GameLibrary.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="client\Header.aspx.cs">
-      <DependentUpon>Header.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="client\Header.aspx.designer.cs">
-      <DependentUpon>Header.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
