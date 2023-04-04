@@ -65,11 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="client\GameLibrary.aspx" />
-    <Content Include="client\Header.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\OrderCart.aspx" />
     <Content Include="client\Payment.aspx" />
-    <Content Include="client\WebForm1.aspx" />
     <Content Include="css\cart.css" />
     <Content Include="css\header.css" />
     <Content Include="css\payment.css" />
@@ -105,13 +103,6 @@
     <Compile Include="client\GameLibrary.aspx.designer.cs">
       <DependentUpon>GameLibrary.aspx</DependentUpon>
     </Compile>
-    <Compile Include="client\Header.aspx.cs">
-      <DependentUpon>Header.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="client\Header.aspx.designer.cs">
-      <DependentUpon>Header.aspx</DependentUpon>
-    </Compile>
     <Compile Include="client\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,20 +124,6 @@
     <Compile Include="client\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="client\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="client\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="client\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="client\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -157,7 +134,6 @@
     <Content Include="obj\Debug\Web_Assignment.csproj.AssemblyReference.cache" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CopyComplete" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CoreCompileInputs.cache" />
-    <Content Include="client\Site1.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
