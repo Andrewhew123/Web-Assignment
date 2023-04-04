@@ -23,7 +23,10 @@
 
     <!---------- Link to fontawesome ---------->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-----------Link to Bootstrap icons--------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
 </head>
 
 
@@ -32,7 +35,7 @@
     <!---------- Header ---------->
     <header class="header">
         <div class="hero">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg bg-black">
                 <div class="container-fluid">
                     <a class="navbar-brand text-white" href="#">
                         <img src="../img/logo.png" height="50px" width="50px" />&nbsp Galaxy</a>
@@ -40,23 +43,31 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item">
+                        <ul class="navbar-nav mb-2 m-2">
+                            <li class="nav-item me-4">
                                 <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">&nbsp &nbsp Browse</a>
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-white" href="#">Browse</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">&nbsp &nbsp Offer</a>
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-white" href="#">Offer</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">&nbsp &nbsp About</a>
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-white" href="#">About</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">&nbsp &nbsp Contact</a>
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-white" href="#">Contact</a>
                             </li>
                     </div>
+                    
+                    <div class="dropdown m-1">
+                       <button type="button" id="dropdownMenuButton" class="btn btn-dark rounded-circle m-2" style="background-color: #000000;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-cart3" style="color: #ffffff; font-size: 20px"></i></button>
+                    <div class="dropdown-menu dropdown-menu-dark rounded" aria-labelledby="dropdownMenuButton">
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-dark rounded-circle m-2" style="background-color: #000000;" type="button" ><i class="bi bi-person" style="color: #ffffff; font-size: 20px"></i></button>
+                        &nbsp
             </nav>
         </div>
     </header>

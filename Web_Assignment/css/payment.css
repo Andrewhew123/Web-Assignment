@@ -327,6 +327,10 @@ small {
 
 
 /***** Game Library *****/
+.container {
+    background-color: #1a1a1a;
+}
+
 
 .colGame {
     padding: 15px;
