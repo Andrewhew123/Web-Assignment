@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\Dashboard.aspx" />
     <Content Include="client\AboutUs.aspx" />
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
