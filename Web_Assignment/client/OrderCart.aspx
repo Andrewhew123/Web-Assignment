@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/client/ClientMaster.Master" AutoEventWireup="true" CodeFile="OrderCart.aspx.cs" Inherits="Web_Assignment.client.OrderCart" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/client/ClientMaster.Master" AutoEventWireup="true" CodeBehind="OrderCart.aspx.cs" Inherits="Web_Assignment.client.OrderCart" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cart" runat="server">
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="row ms-5 me-5">
             <h1 style="color:white; margin-bottom:25px">My Cart</h1>
             <div class="col-md-8">
@@ -66,7 +66,7 @@
                         <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-info mt-4" Text="Submit" />
                     </div>
                 </div>
-
+               
                 <div class="d-flex justify-content-between" style="color:white">
                       <p class="mb-2">Subtotal</p>
                       <p class="mb-2">RM 213.99</p>
