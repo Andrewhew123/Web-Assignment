@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Web_Assignment.admin
 {
-    public partial class ManageFeature : System.Web.UI.Page
+    public partial class UpdateGenre : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

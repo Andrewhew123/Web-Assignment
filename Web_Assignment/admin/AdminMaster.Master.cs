@@ -13,5 +13,10 @@ namespace Web_Assignment.admin
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Manage/ManageProduct.aspx");
+        }
     }
 }

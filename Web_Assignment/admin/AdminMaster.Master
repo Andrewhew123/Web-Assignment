@@ -42,19 +42,10 @@
 
                 <!----- Menu option: Dashboard ----->
                 <li>
-                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <a href="Dashboard.aspx" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                         <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                         <span class="ml-3">Dashboard</span>
-                    </a>
-                </li>
-
-                <!----- Menu option: User ----->
-                <li>
-                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                     </a>
                 </li>
 
@@ -69,16 +60,13 @@
                     </button>
                     <ul id="dropdown-example-add-item" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Game</a>
+                            <a href="AddProduct.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Game</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Genre</a>
+                            <a href="AddGenre.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Genre</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Feature</a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">System</a>
+                            <a href="AddSystem.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">System</a>
                         </li>
                     </ul>
 
@@ -101,9 +89,6 @@
                             <a href="ManageGenre.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Genre</a>
                         </li>
                         <li>
-                            <a href="ManageFeature.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Feature</a>
-                        </li>
-                        <li>
                             <a href="ManageSystem.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">System</a>
                         </li>
                     </ul>
@@ -114,25 +99,45 @@
         </div>
     </aside>
 
+    <div class="p-4 sm:ml-64 bg-zinc-900">
+        <div class="p-4 rounded-lg bg-zinc-900">
 
             <!-- Content -->
     
-            <form id="form2" runat="server">
+            <form id="form1" runat="server">
                 <div>
                     <asp:ContentPlaceHolder ID="Dashboard" runat="server">
                     </asp:ContentPlaceHolder>
+
+                    <!----- Manage item page ----->
                     <asp:ContentPlaceHolder ID="ManageProduct" runat="server">
                     </asp:ContentPlaceHolder>
                     <asp:ContentPlaceHolder ID="ManageGenre" runat="server">
                     </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="ManageFeature" runat="server">
-                    </asp:ContentPlaceHolder>
                     <asp:ContentPlaceHolder ID="ManageSystem" runat="server">
                     </asp:ContentPlaceHolder>
+
+                    <!----- Add item page ----->
+                    <asp:ContentPlaceHolder ID="AddProduct" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="AddGenre" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="AddSystem" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <!----- Update item page ----->
+                    <asp:ContentPlaceHolder ID="UpdateProduct" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="UpdateGenre" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="UpdateSystem" runat="server">
+                    </asp:ContentPlaceHolder>
+
                 </div>
             </form>
 
         </div>
     </div>
+
 </body>
 </html>

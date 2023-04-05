@@ -50,7 +50,7 @@
                             50GB
                         </td>
                         <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
+                            <asp:LinkButton ID="LinkButton1" PostBackUrl="~/admin/UpdateSystem.aspx" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
                                 <i class="fa fa-edit"></i>
                             </asp:LinkButton>
                         </td>
@@ -75,7 +75,7 @@
                             50GB
                         </td>
                         <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton3" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
+                            <asp:LinkButton ID="LinkButton3" PostBackUrl="~/admin/UpdateSystem.aspx" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
                                 <i class="fa fa-edit"></i>
                             </asp:LinkButton>
                         </td>
@@ -100,7 +100,7 @@
                             50GB
                         </td>
                         <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton5" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
+                            <asp:LinkButton ID="LinkButton5" PostBackUrl="~/admin/UpdateSystem.aspx" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
                                 <i class="fa fa-edit"></i>
                             </asp:LinkButton>
                         </td>
