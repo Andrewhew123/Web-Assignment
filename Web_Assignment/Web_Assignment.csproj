@@ -130,7 +130,7 @@
     </Compile>
     <Compile Include="client\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
-
+    </Compile>
     <Compile Include="admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
