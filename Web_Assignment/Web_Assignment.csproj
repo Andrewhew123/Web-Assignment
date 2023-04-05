@@ -64,14 +64,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AddGenre.aspx" />
+    <Content Include="admin\AddProduct.aspx" />
+    <Content Include="admin\AddSystem.aspx" />
     <Content Include="admin\Dashboard.aspx" />
-    <Content Include="admin\ManageFeature.aspx" />
     <Content Include="admin\ManageGenre.aspx" />
     <Content Include="admin\ManageProduct.aspx" />
     <Content Include="admin\ManageSystem.aspx" />
-
     <Content Include="admin\Dashboard.aspx" />
-
+    <Content Include="admin\UpdateGenre.aspx" />
+    <Content Include="admin\UpdateProduct.aspx" />
+    <Content Include="admin\UpdateSystem.aspx" />
     <Content Include="App_Data\Galaxy.mdf" />
     <Content Include="App_Data\Galaxy_log.ldf">
       <DependentUpon>Galaxy.mdf</DependentUpon>
@@ -127,6 +130,48 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AddGenre.aspx.cs">
+      <DependentUpon>AddGenre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddGenre.aspx.designer.cs">
+      <DependentUpon>AddGenre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddSystem.aspx.cs">
+      <DependentUpon>AddSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddSystem.aspx.designer.cs">
+      <DependentUpon>AddSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UpdateGenre.aspx.cs">
+      <DependentUpon>UpdateGenre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\UpdateGenre.aspx.designer.cs">
+      <DependentUpon>UpdateGenre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UpdateProduct.aspx.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\UpdateProduct.aspx.designer.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UpdateSystem.aspx.cs">
+      <DependentUpon>UpdateSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\UpdateSystem.aspx.designer.cs">
+      <DependentUpon>UpdateSystem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="client\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,13 +192,6 @@
     </Compile>
     <Compile Include="admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\ManageFeature.aspx.cs">
-      <DependentUpon>ManageFeature.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\ManageFeature.aspx.designer.cs">
-      <DependentUpon>ManageFeature.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ManageGenre.aspx.cs">
       <DependentUpon>ManageGenre.aspx</DependentUpon>
