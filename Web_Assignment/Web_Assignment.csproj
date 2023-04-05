@@ -64,39 +64,64 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="client\AboutUs.aspx" />
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
+    <Content Include="client\Login.aspx" />
     <Content Include="client\OrderCart.aspx" />
     <Content Include="client\Payment.aspx" />
     <Content Include="client\Product.aspx" />
+    <Content Include="client\Register.aspx" />
+    <Content Include="client\UserProfile.aspx" />
+    <Content Include="css\aboutus.css" />
     <Content Include="css\cart.css" />
     <Content Include="css\header.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\payment.css" />
+    <Content Include="css\register.css" />
+    <Content Include="css\userprofile.css" />
+    <Content Include="img\aboutus\andrew.png" />
+    <Content Include="img\aboutus\tzenyang.png" />
     <Content Include="img\bg-image.jpg" />
     <Content Include="img\firewatch2.jpg" />
     <Content Include="img\firewatch1.png" />
+    <Content Include="img\account\galaxy.png" />
     <Content Include="img\header\cart.png" />
     <Content Include="img\header\user.png" />
+    <Content Include="img\aboutus\hinyong.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\mh.jpg" />
     <Content Include="img\mh2.jpg" />
     <Content Include="img\mh3.jpg" />
     <Content Include="img\mh4.jpg" />
     <Content Include="img\mhlogo.png" />
+    <Content Include="img\aboutus\personality.png" />
     <Content Include="img\product\cyberpunk.jpg" />
     <Content Include="img\product\dead_space.jpg" />
     <Content Include="img\product\iarc_18.jpg" />
     <Content Include="img\product\macOS.png" />
     <Content Include="img\product\windows10.png" />
+    <Content Include="img\aboutus\purpose.png" />
+    <Content Include="img\aboutus\target.png" />
+    <Content Include="img\account\ufo-flying.png" />
+    <Content Include="img\user-avatar.png" />
     <Content Include="img\user.png" />
     <Content Include="img\firewatch3.jpg" />
     <Content Include="img\wy.jpeg" />
+    <Content Include="img\aboutus\zhongren.png" />
     <Content Include="obj\Debug\Web_Assignment.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Web_Assignment.dll" />
     <Content Include="obj\Debug\Web_Assignment.pdb" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="client\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="client\ClientMaster.Master.cs">
       <DependentUpon>ClientMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,6 +143,13 @@
     <Compile Include="client\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="client\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="client\OrderCart.aspx.cs">
       <DependentUpon>OrderCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,6 +170,20 @@
     </Compile>
     <Compile Include="client\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Payment" runat="Server">
 
-    <html>
         <div class="container">
 
         <div class="row">
@@ -267,7 +266,6 @@
 
 
     <!---------- Payment Message ---------->
-    </html>
     
 </asp:Content>
 
