@@ -64,6 +64,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Galaxy.mdf" />
+    <Content Include="App_Data\Galaxy_log.ldf">
+      <DependentUpon>Galaxy.mdf</DependentUpon>
+    </Content>
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\OrderCart.aspx" />
@@ -149,6 +153,7 @@
     <Content Include="obj\Debug\Web_Assignment.csproj.AssemblyReference.cache" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CopyComplete" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CoreCompileInputs.cache" />
+    <Content Include="ClientMenu.sitemap" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
