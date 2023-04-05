@@ -11,8 +11,7 @@
     <!---------- Link to payment CSS ---------->
     <link href="../css/payment.css" rel="stylesheet" type="text/css" />
 
-    <!---------- Link to Header CSS ----------->
-    <link href="../css/header.css" rel="stylesheet" type="text/css" />
+    <!---------- Link to Tailwind CSS ----------->
 
     <!---------- Link to cart CSS ----------->
     <link href="../css/cart.css" rel="stylesheet" type="text/css" />
@@ -37,6 +36,7 @@
 
     <!---------- Header ---------->
     <form id="form2" runat="server">
+
     <header class="header">
         <div class="hero">
             <nav class="navbar navbar-expand-lg bg-black">
@@ -66,7 +66,7 @@
                         </ul>
                         
                     </div>
-                    
+
                     <div class="dropdown m-1">
                         <button type="button" id="dropdownMenuButton" class="btn btn-dark rounded-circle m-2" style="background-color: #000000;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-cart3" style="color: #ffffff; font-size: 20px"></i></button>
                         <div class="dropdown-menu dropdown-menu-dark rounded" aria-labelledby="dropdownMenuButton">
