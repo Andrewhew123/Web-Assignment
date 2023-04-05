@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="text-white">
+<body class="text-white" style="color: white;">
     <div>
         <div class="navbar bg-black">
             <div class="navbar-start">
@@ -107,7 +107,7 @@
     </div>
     </br>
     <div>
-        <p class="text-4xl text-gray-900 dark:text-white m-5">Monster Hunter: World</p>
+        <p class="text-4xl text-gray-900 text-white m-5">Monster Hunter: World</p>
         </br>
         
         <div class="flex items-center ml-5">
