@@ -1,0 +1,68 @@
+﻿body {
+    font-family: Montserrat, Manrope, BrutalTypeBold, sans-serif;
+    background-color: #F8F4FA;
+}
+
+.logo {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+}
+
+.ufo {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.topic {
+    margin-left: 1000px;
+    width: 15%;
+    height: 5%;
+}
+
+.label {
+    text-align: right;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 240px
+}
+
+.box {
+    width: 220px;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.forget {
+    font-size: 15px;
+    color: #640086;
+}
+
+.btn {
+    margin-left: 1050px;
+    background-color: #9F76AE;
+    padding: 12px 48px;
+    border-radius: 12px;
+    font-size: 17px;
+    color: white;
+}
+
+.account {
+    text-align: right;
+    position: relative;
+    margin-right: 280px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hyper {
+    color: #640086;
+    font-weight: bold;
+}
