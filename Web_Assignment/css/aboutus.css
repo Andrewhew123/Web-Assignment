@@ -1,4 +1,7 @@
 ﻿body {
+    background-image: url('../img/bg-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     font-family: Montserrat, Manrope, BrutalTypeBold, sans-serif;
 }
 
