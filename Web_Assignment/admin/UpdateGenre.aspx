@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="UpdateGenre" runat="Server">
     
-    <div class="container mx-auto px-5">
+    <div class="container mx-auto px-5 bg-zinc-900">
 
         <h1 class="text-white text-3xl mb-3">Update Genre</h1>
         <hr />
