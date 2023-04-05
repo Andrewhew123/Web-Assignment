@@ -7,7 +7,7 @@
 
     <title>Dashboard</title>
     <body>
-        <div class="p-4 sm:ml-64 bg-zinc-900">
+        <div class="p-4  bg-zinc-900">
             <div class="p-4 border-2 border-neutral-100 border rounded-lg dark:border-neutral-400 mt-14">
                 <div class="overflow-hidden rounded-lg shadow-lg">
                     <div
@@ -55,7 +55,7 @@
                 </script>
             </div>
         </div>
-        <div class="p-4 sm:ml-64 bg-zinc-900">
+        <div class="p-4 bg-zinc-900">
             <div class="p-4 border-2 border-neutral-100 border rounded-lg dark:border-neutral-400 mt-14">
                 <div class="overflow-hidden rounded-lg shadow-lg">
                     <div
