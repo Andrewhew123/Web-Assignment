@@ -1,4 +1,4 @@
-﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientMaster.master.cs" Inherits="Web_Assignment.client.ClientMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientMaster.master.cs" Inherits="Web_Assignment.client.ClientMaster" %>
 
 <!DOCTYPE html>
 
@@ -11,8 +11,7 @@
     <!---------- Link to payment CSS ---------->
     <link href="../css/payment.css" rel="stylesheet" type="text/css" />
 
-    <!---------- Link to Header CSS ----------->
-    <link href="../css/header.css" rel="stylesheet" type="text/css" />
+    <!---------- Link to Tailwind CSS ----------->
 
     <!---------- Link to cart CSS ----------->
     <link href="../css/cart.css" rel="stylesheet" type="text/css" />
@@ -42,6 +41,8 @@
 <body id="body">
 
     <!---------- Header ---------->
+    <form id="form2" runat="server">
+
     <header class="header">
         <div class="hero">
             <nav class="navbar navbar-expand-lg bg-black">
@@ -68,8 +69,10 @@
                             <li class="nav-item me-4">
                                 <a class="nav-link text-white" href="#">Contact</a>
                             </li>
+                        </ul>
+                        
                     </div>
-                    
+
                     <div class="dropdown m-1">
                         <button type="button" id="dropdownMenuButton" class="btn btn-dark rounded-circle m-2" style="background-color: #000000;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-cart3" style="color: #ffffff; font-size: 20px"></i></button>
                         <div class="dropdown-menu dropdown-menu-dark rounded" aria-labelledby="dropdownMenuButton">
@@ -79,15 +82,22 @@
                 &nbsp
             </nav>
         </div>
+
+
+        
+         
     </header>
+
+        
     <!---------- Header ---------->
 
     <br />
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal"></asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
 
     <!------------------------- Content ------------------------->
 
     <!---------- Order ---------->
-    <form id="form2" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="Payment" runat="server">
             </asp:ContentPlaceHolder>
@@ -153,7 +163,7 @@
                         </h6>
                         <p>
                             Trusted since 1999. 
-                        </p>
+                         </p>
                     </div>
                     <!-- Grid column -->
 

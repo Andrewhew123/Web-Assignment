@@ -64,7 +64,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+
     <Content Include="client\AboutUs.aspx" />
+
+    <Content Include="App_Data\Galaxy.mdf" />
+    <Content Include="App_Data\Galaxy_log.ldf">
+      <DependentUpon>Galaxy.mdf</DependentUpon>
+    </Content>
+    <Content Include="admin\Dashboard.aspx" />
+
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\Login.aspx" />
@@ -115,12 +123,28 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="client\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="client\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+
+    <Compile Include="admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+
     </Compile>
     <Compile Include="client\ClientMaster.Master.cs">
       <DependentUpon>ClientMaster.Master</DependentUpon>
@@ -195,6 +219,8 @@
     <Content Include="obj\Debug\Web_Assignment.csproj.AssemblyReference.cache" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CopyComplete" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CoreCompileInputs.cache" />
+    <Content Include="ClientMenu.sitemap" />
+    <Content Include="admin\AdminMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
