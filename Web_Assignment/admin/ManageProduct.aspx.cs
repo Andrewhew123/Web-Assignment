@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Web_Assignment.client
+namespace Web_Assignment.admin
 {
-    public partial class OrderCart : System.Web.UI.Page
+    public partial class ManageProduct : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

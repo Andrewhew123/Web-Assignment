@@ -65,6 +65,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Dashboard.aspx" />
+    <Content Include="admin\ManageFeature.aspx" />
+    <Content Include="admin\ManageGenre.aspx" />
+    <Content Include="admin\ManageProduct.aspx" />
+    <Content Include="admin\ManageSystem.aspx" />
+
+    <Content Include="admin\Dashboard.aspx" />
+
+    <Content Include="App_Data\Galaxy.mdf" />
+    <Content Include="App_Data\Galaxy_log.ldf">
+      <DependentUpon>Galaxy.mdf</DependentUpon>
+    </Content>
     <Content Include="client\AboutUs.aspx" />
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
@@ -116,6 +127,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="client\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,12 +148,33 @@
     <Compile Include="admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="client\AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
+    <Compile Include="admin\ManageFeature.aspx.cs">
+      <DependentUpon>ManageFeature.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="client\AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
+    <Compile Include="admin\ManageFeature.aspx.designer.cs">
+      <DependentUpon>ManageFeature.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ManageGenre.aspx.cs">
+      <DependentUpon>ManageGenre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ManageGenre.aspx.designer.cs">
+      <DependentUpon>ManageGenre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ManageProduct.aspx.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ManageProduct.aspx.designer.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ManageSystem.aspx.cs">
+      <DependentUpon>ManageSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ManageSystem.aspx.designer.cs">
+      <DependentUpon>ManageSystem.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\ClientMaster.Master.cs">
       <DependentUpon>ClientMaster.Master</DependentUpon>
