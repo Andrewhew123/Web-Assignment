@@ -39,10 +39,14 @@
         <p class="label">
             Username<br />
             <asp:TextBox ID="name" runat="server" class="text"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" Text="Edit" class="editbtn"/>
         </p>
         <p class="label">
             Email<br />
             <asp:TextBox ID="TextBox2" runat="server" class="text"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" Text="Edit" class="editbtn"/>
         </p>
         <p class="label">
             Gender<br />

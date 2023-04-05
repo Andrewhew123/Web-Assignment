@@ -1,5 +1,8 @@
 ﻿body {
     font-family: Montserrat, Manrope, BrutalTypeBold, sans-serif;
+    background-image: url('../img/bg-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .maintitle {
@@ -78,11 +81,12 @@
     height: 35px;
     font-size: 17px;
     border-radius: 12px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .border {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #D3D3D3;
     padding: 20px;
     margin: 30px;
 }
@@ -108,6 +112,7 @@
     background-color: red;
     color: white;
     border: 3px solid darkred;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 table {
@@ -118,4 +123,15 @@ table {
 td {
     text-align: center;
     padding: 20px 60px 20px 60px
+}
+
+.editbtn {
+    background-color: #9F76AE;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
