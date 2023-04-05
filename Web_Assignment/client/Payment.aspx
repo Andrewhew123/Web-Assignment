@@ -203,7 +203,7 @@
                 <h4 style="text-align: left;">Order</h4>
 
                 <div class="table-responsive-xl">
-                    <table class="table table-hover">
+                    <table class="table table-hover m-1">
                         <thead>
                         <tr style="background-color: lightgrey;">
                             <th scope="col">No</th>
