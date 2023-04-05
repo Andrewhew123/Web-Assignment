@@ -64,7 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-
+    <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ManageFeature.aspx" />
     <Content Include="admin\ManageGenre.aspx" />
     <Content Include="admin\ManageProduct.aspx" />
