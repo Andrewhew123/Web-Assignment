@@ -1,13 +1,13 @@
 ﻿body {
+    font-family: Montserrat, Manrope, BrutalTypeBold, sans-serif;
     background-image: url('../img/bg-image.jpg');
     background-size: cover;
     background-attachment: fixed;
-    font-family: Montserrat, Manrope, BrutalTypeBold, sans-serif;
 }
 
 .abtitle {
     text-align: center;
-    text-shadow: 3px 3px gainsboro;
+    text-shadow: 2px 2px gainsboro;
     font-family: 'Brush Script MT', cursive;
     font-size: 50px;
     color: #9F76AE;
@@ -24,7 +24,7 @@
 
 article #about_title {
     text-align: center;
-    text-shadow: 3px 3px gainsboro;
+    text-shadow: 2px 2px gainsboro;
     font-family: 'Brush Script MT', cursive;
     font-size: 50px;
 }
@@ -52,7 +52,7 @@ article #about_title {
 .cardtopic {
     width: 460px;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 3px 3px gainsboro;
+    text-shadow: 2px 2px gainsboro;
     color: #9F76AE;
 }
 
@@ -99,6 +99,7 @@ div#container {
     margin-bottom: 60px;
     text-align: center;
     color: #9F76AE;
+    text-shadow: 2px 2px gainsboro;
 }
 
 table {

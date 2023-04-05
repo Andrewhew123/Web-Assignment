@@ -35,7 +35,7 @@
             <asp:HyperLink ID="forgetpass" runat="server" class="forget">Forget Password?</asp:HyperLink>
         </p>
 
-        <asp:Button ID="login" runat="server" Text="Login" class="submitbtn" />
+        <asp:Button ID="login" runat="server" Text="Login" class="btn" />
 
         <br />
         <br />

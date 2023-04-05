@@ -92,9 +92,9 @@
     <!---------- Header ---------->
 
     <br />
-        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal"></asp:Menu>
-        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-
+        <%--<asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal"></asp:Menu>--%>
+        <%--<asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />--%>
+        
     <!------------------------- Content ------------------------->
 
     <!---------- Order ---------->

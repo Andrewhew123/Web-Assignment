@@ -2,15 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="userprofile" runat="Server">
 
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="../img/user-avatar.png" alt="AVATAR" width="30" height="30" class="d-inline-block align-text-top" />
-                Account Settings
-            </a>
-        </div>
-    </nav>
-
     <div>
         <p class="maintitle">Account Settings</p>
     </div>
@@ -82,12 +73,11 @@
 
     <div class="border">
         <p class="label">
-            Current Password :&nbsp;&nbsp;&nbsp;
+            Current Password :&nbsp;&nbsp; &nbsp;
             <asp:TextBox ID="currentpass" runat="server" class="passwordtext"></asp:TextBox>
         </p>
         <p class="label">
-            New Password :&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="newpass" runat="server" class="passwordtext"></asp:TextBox>
+            New Password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <asp:TextBox ID="newpass" runat="server" class="passwordtext"></asp:TextBox>
         </p>
         <p class="label">
             Confirm Password :&nbsp;&nbsp;&nbsp;
@@ -113,4 +103,6 @@
             </tr>
         </table>
     </div>
+    <br />
+    <br />
 </asp:Content>
