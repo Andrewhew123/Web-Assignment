@@ -114,8 +114,6 @@
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-64 bg-zinc-900">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-zinc-900 bg-zinc-900">
 
             <!-- Content -->
     
@@ -136,12 +134,5 @@
 
         </div>
     </div>
-    <!-- Content -->
-    <form id="form2" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="Dashboard" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
 </body>
 </html>
