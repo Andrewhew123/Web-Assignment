@@ -12,7 +12,7 @@
     <script>
 </script>
     <title>Index
-  </title>
+    </title>
 
 </head>
 
@@ -28,15 +28,15 @@
                         </svg>
                     </label>
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
+                        <li><a href="Home.aspx">Home</a></li>
                         <li tabindex="0"></li>
-                        <li><a>Browse</a></li>
+                        <li><a href="#Browse">Browse</a></li>
                         <li tabindex="0"></li>
-                        <li><a>Offer</a></li>
+                        <li><a href="GameLibrary.aspx">Offer</a></li>
                         <li tabindex="0"></li>
-                        <li><a>About</a></li>
+                        <li><a href="AboutUs.aspx">About</a></li>
                         <li tabindex="0"></li>
-                        <li><a>Contact</a></li>
+                        <li><a href="AboutUs.aspx">Contact</a></li>
                         <li tabindex="0"></li>
                     </ul>
                 </div>
@@ -48,15 +48,15 @@
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                    <li><a href="Home.aspx">Home</a></li>
                     <li tabindex="0"></li>
-                    <li><a>Browse</a></li>
+                    <li><a href="#Browse">Browse</a></li>
                     <li tabindex="0"></li>
-                    <li><a>Offer</a></li>
+                    <li><a href="GameLibrary.aspx">Offer</a></li>
                     <li tabindex="0"></li>
-                    <li><a>About</a></li>
+                    <li><a href="AboutUs.aspx">About</a></li>
                     <li tabindex="0"></li>
-                    <li><a>Contact</a></li>
+                    <li><a href="AboutUs.aspx">Contact</a></li>
                     <li tabindex="0"></li>
                 </ul>
             </div>
@@ -90,12 +90,11 @@
                         </label>
                         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                                <a class="justify-between">Profile
+                                <a class="justify-between" href="UserProfile.aspx">Profile
                  
                                     <span class="badge">New</span>
                                 </a>
                             </li>
-                            <li><a>Settings</a></li>
                             <li><a>Logout</a></li>
                         </ul>
                     </div>
@@ -115,7 +114,7 @@
     </div>
     </br>
     <br />
-    <h1 class="text-3xl">&nbsp;&nbsp; Hot Games ></h1>
+    <h1 class="text-3xl" id="Browse">&nbsp;&nbsp; Hot Games ></h1>
     <div>
         <div class="carousel carousel-center max-w-full p-6 space-x-7 bg-neutral rounded-box bg-zinc-900">
             <div class="carousel-item">
@@ -225,7 +224,8 @@
         <div>
             <div class="m-auto card lg:card-side bg-zinc-900 shadow-xl outline p-5 w-11/12">
                 <figure>
-                    <img src="../img/mh.jpg" class="h-80" alt="Album" /></figure>
+                    <img src="../img/mh.jpg" class="h-80" alt="Album" />
+                </figure>
                 <div class="card-body">
                     <h2 class="card-title">New Game Announced!</h2>
                     <p>Legendary developer Lee Wee Yan has announced the developement of a new, cutting-edge game!</p>
@@ -233,7 +233,7 @@
                         <button class="btn btn-primary">Learn More</button>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
         <br>
     </div>
