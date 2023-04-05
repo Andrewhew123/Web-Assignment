@@ -64,15 +64,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-
-    <Content Include="client\AboutUs.aspx" />
-
-    <Content Include="App_Data\Galaxy.mdf" />
-    <Content Include="App_Data\Galaxy_log.ldf">
-      <DependentUpon>Galaxy.mdf</DependentUpon>
-    </Content>
-    <Content Include="admin\Dashboard.aspx" />
-
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\Login.aspx" />
