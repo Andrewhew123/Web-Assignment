@@ -98,6 +98,7 @@
     <Content Include="img\aboutus\andrew.png" />
     <Content Include="img\aboutus\tzenyang.png" />
     <Content Include="img\bg-image.jpg" />
+    <Content Include="img\border_bg.jpg" />
     <Content Include="img\firewatch2.jpg" />
     <Content Include="img\firewatch1.png" />
     <Content Include="img\account\galaxy.png" />
