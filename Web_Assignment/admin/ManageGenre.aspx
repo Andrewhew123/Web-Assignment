@@ -6,7 +6,7 @@
         
 
         <!---------- Add Genre Form ---------->
-        <h1 class="text-white text-3xl mb-3">Add Genre</h1>
+        <h1 class="text-white text-3xl mb-3">Add Genres</h1>
         <hr />
 
         <br />
