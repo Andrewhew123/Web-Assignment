@@ -1,119 +1,63 @@
-﻿<%@ Page Language="C#" MasterPageFile="AdminMaster.Master" AutoEventWireup="true" CodeBehind="ManageSystem.aspx.cs" Inherits="Web_Assignment.admin.ManageSystem" %>
+﻿<%@ Page Language="C#" MasterPageFile="AdminMaster.Master" AutoEventWireup="true" CodeBehind="ManageSystem.aspx.cs" Inherits="Web_Assignment.admin.AddSystem" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ManageSystem" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="AddSystem" runat="Server">
     
     <div class="container mx-auto px-5">
 
-        <h1 class="text-white text-3xl">Manage System Requirement</h1>
-
+        <h1 class="text-white text-3xl mb-3">Add System Requirements</h1>
         <hr />
 
         <br />
 
-        <!----- Manage Game Table ----->
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">
-                            No
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Operating System
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Processor
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Storage
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Edit
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Remove
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="px-6 py-4">
-                            1
-                        </td>
-                        <td class="px-6 py-4">
-                            Window OS
-                        </td>
-                        <td class="px-6 py-4">
-                            AMD Processor
-                        </td>
-                        <td class="px-6 py-4">
-                            50GB
-                        </td>
-                        <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton1" PostBackUrl="~/admin/UpdateSystem.aspx" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
-                                <i class="fa fa-edit"></i>
-                            </asp:LinkButton>
-                        </td>
-                        <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton2" runat="server" class="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black" data-toggle="tooltip" data-placement="top" title="Remove">
-                                <i class="fa fa-trash"></i>
-                            </asp:LinkButton>
-                        </td>
-                    </tr>
+        <!---------- Add System Requirements Form ---------->
+        <div class="text-white">
 
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="px-6 py-4">
-                            2
-                        </td>
-                        <td class="px-6 py-4">
-                            Window OS
-                        </td>
-                        <td class="px-6 py-4">
-                            AMD Processor
-                        </td>
-                        <td class="px-6 py-4">
-                            50GB
-                        </td>
-                        <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton3" PostBackUrl="~/admin/UpdateSystem.aspx" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
-                                <i class="fa fa-edit"></i>
-                            </asp:LinkButton>
-                        </td>
-                        <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton4" runat="server" class="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black" data-toggle="tooltip" data-placement="top" title="Remove">
-                                <i class="fa fa-trash"></i>
-                            </asp:LinkButton>
-                        </td>
-                    </tr>
+            <!----- Operating System ----->
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium" runat="server">Operating System</label>
+                <asp:TextBox ID="txtOperatingSystem" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Operating System"></asp:TextBox>
+            </div>
 
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="px-6 py-4">
-                            3
-                        </td>
-                        <td class="px-6 py-4">
-                            Window OS.
-                        </td>
-                        <td class="px-6 py-4">
-                            AMD Processor
-                        </td>
-                        <td class="px-6 py-4">
-                            50GB
-                        </td>
-                        <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton5" PostBackUrl="~/admin/UpdateSystem.aspx" runat="server" class="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" data-toggle="tooltip" data-placement="top" title="Edit">
-                                <i class="fa fa-edit"></i>
-                            </asp:LinkButton>
-                        </td>
-                        <td class="px-6 py-4">
-                            <asp:LinkButton ID="LinkButton6" runat="server" class="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black" data-toggle="tooltip" data-placement="top" title="Remove">
-                                <i class="fa fa-trash"></i>
-                            </asp:LinkButton>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <!----- Processor ----->
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium" runat="server">Processor</label>
+                <asp:TextBox ID="txtProcessor" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Processor"></asp:TextBox>
+            </div>
 
+            <!----- Storage ----->
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium" runat="server">Storage</label>
+                <asp:TextBox ID="txtStorage" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Storage"></asp:TextBox>
+            </div>
+
+            <br />
+
+            <asp:Button ID="btnAddSystem" runat="server" Text="Add" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" OnClick="btnAddSystem_Click" />
         </div>
+
+        <!----- Data Output ----->
+        <!----- Display Genre Data ----->
+        <br /><br />
+        <h1 class="text-white text-3xl mb-3">Manage Genre</h1>
+        <hr />
+        <br />
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+
+            <asp:GridView ID="GridViewSystem" runat="server" AutoGenerateColumns="false" DataKeyNames="systemId" CssClass="table w-full text-sm text-left text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600" OnRowCancelingEdit="GridViewSystem_RowCancelingEdit" OnRowDeleting="GridViewSystem_RowDeleting" OnRowEditing="GridViewSystem_RowEditing" OnRowUpdating="GridViewSystem_RowUpdating" >
+                <Columns>
+                    <asp:BoundField DataField="systemId" HeaderText="Id" ReadOnly="True" />
+                    <asp:BoundField DataField="os" HeaderText="Operating System" />
+                    <asp:BoundField DataField="processor" HeaderText="Processor" />
+                    <asp:BoundField DataField="storage" HeaderText="Storage" />
+
+                    <asp:CommandField ShowEditButton="True" ControlStyle-CssClass="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" />
+                    <asp:CommandField ShowDeleteButton="True" ControlStyle-CssClass="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black" />
+                </Columns>
+            </asp:GridView>
+            
+        </div>
+
 
     </div>
 
