@@ -26,22 +26,9 @@
     height: 5%;
 }
 
-.username {
-    font-size: 23px;
+#label {
+    font-size: 20px;
     font-weight: bold;
-    margin-left: 200px
-}
-
-.email {
-    font-size: 23px;
-    font-weight: bold;
-    margin-left: 250px
-}
-
-.password {
-    font-size: 23px;
-    font-weight: bold;
-    margin-left: 205px
 }
 
 .box {
@@ -52,22 +39,17 @@
     padding-right: 10px;
 }
 
-.confirm {
+.errormessage {
     font-size: 13px;
-    margin-left: 335px;
+}
+
+#passwordformat {
+    font-size: 13px;
     color: #868686;
     margin-top: -21px;
 }
 
-.confirmpassword {
-    font-size: 23px;
-    font-weight: bold;
-    margin-left: 115px;
-    margin-top: -10px;
-}
-
-.btn {
-    margin-left: 310px;
+.registerbtn {
     background-color: #9F76AE;
     padding: 12px 48px;
     border-radius: 12px;
@@ -75,9 +57,21 @@
     color: white;
 }
 
+.regiondropdown {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: 17px;
+    position: relative;
+    background-color: #9F76AE;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
 .account {
     position: relative;
-    margin-left: 280px;
+    margin-left: 270px;
     font-size: 18px;
     font-weight: bold;
 }

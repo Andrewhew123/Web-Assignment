@@ -51,7 +51,6 @@
         <p class="label">
             Region<br />
             <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="False" class="profiledropdown">
-                <asp:ListItem>Default</asp:ListItem>
                 <asp:ListItem>China</asp:ListItem>
                 <asp:ListItem>India</asp:ListItem>
                 <asp:ListItem>Japan</asp:ListItem>
