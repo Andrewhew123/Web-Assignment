@@ -164,7 +164,7 @@ namespace Web_Assignment.admin
 
                 if (rowAffected > 0 )
                 {
-                    Response.Write("<script>alert('Successfullyy update product')</script>");
+                    Response.Write("<script>alert('Successfully update product')</script>");
                 }
                 else
                 {
