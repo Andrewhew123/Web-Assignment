@@ -4,7 +4,7 @@
     
     <div class="container mx-auto px-5">
 
-        <h1 class="text-white text-3xl mb-3">Add System Requirements</h1>
+        <h1 class="text-white text-3xl mb-3">Add System</h1>
         <hr />
 
         <br />
@@ -15,19 +15,25 @@
             <!----- Operating System ----->
             <div class="mb-6">
                 <label class="block mb-2 text-sm font-medium" runat="server">Operating System</label>
-                <asp:TextBox ID="txtOperatingSystem" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Operating System"></asp:TextBox>
+                <asp:TextBox ID="txtOperatingSystem" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. Window OS"></asp:TextBox>
+                <!--- Operating System Validator --->
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorOS" runat="server" ErrorMessage="Operating System is required" ControlToValidate="txtOperatingSystem" ForeColor="#FF3300"></asp:RequiredFieldValidator>    
             </div>
 
             <!----- Processor ----->
             <div class="mb-6">
                 <label class="block mb-2 text-sm font-medium" runat="server">Processor</label>
-                <asp:TextBox ID="txtProcessor" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Processor"></asp:TextBox>
+                <asp:TextBox ID="txtProcessor" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. Intel Core i5-10400"></asp:TextBox>
+                <!--- Processor Validator --->
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorProcessor" runat="server" ErrorMessage="Processor is required" ControlToValidate="txtProcessor" ForeColor="#FF3300"></asp:RequiredFieldValidator>
             </div>
 
             <!----- Storage ----->
             <div class="mb-6">
                 <label class="block mb-2 text-sm font-medium" runat="server">Storage</label>
-                <asp:TextBox ID="txtStorage" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Storage"></asp:TextBox>
+                <asp:TextBox ID="txtStorage" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. 10GB"></asp:TextBox>
+                <!--- Product Name Validator --->
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorStorage" runat="server" ErrorMessage="Storage is required" ControlToValidate="txtStorage" ForeColor="#FF3300"></asp:RequiredFieldValidator>
             </div>
 
             <br />
@@ -38,7 +44,7 @@
         <!----- Data Output ----->
         <!----- Display Genre Data ----->
         <br /><br />
-        <h1 class="text-white text-3xl mb-3">Manage Genre</h1>
+        <h1 class="text-white text-3xl mb-3">Manage System</h1>
         <hr />
         <br />
 

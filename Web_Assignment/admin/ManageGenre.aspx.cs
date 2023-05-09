@@ -62,25 +62,8 @@ namespace Web_Assignment.admin
                 displayGenre();   
 
             }
-
             
 
-        }
-
-        protected void btnEdit_Click(object sender, EventArgs e)
-        {
-
-            Response.Write("<script>alert('Edit Genre') </script>");
-        }
-
-        protected void btnRemove_Click(object sender, EventArgs e)
-        {
-            string message = "Remove Genre";
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.Append("alert('");
-            sb.Append(message);
-            sb.Append("');");
-            ClientScript.RegisterOnSubmitStatement(this.GetType(), "alert", sb.ToString());
         }
 
 
@@ -101,9 +84,9 @@ namespace Web_Assignment.admin
                 String strUpdateGenre = "update genre set genreName='" + genre + "' where genreId='" + id + "'";
                 SqlCommand cmd = new SqlCommand(strUpdateGenre, con);
                 
-                int t = cmd.ExecuteNonQuery();
+                int rowAffected = cmd.ExecuteNonQuery();
                 
-                if (t > 0)
+                if (rowAffected > 0)
                 {
                     Response.Write("<script>alert('Successfully update genre into database')</script>");
                     GridViewGenre.EditIndex = -1;
@@ -130,9 +113,9 @@ namespace Web_Assignment.admin
                 String strDeleteGenre = "delete from genre where genreId='" + id + "'";
                 SqlCommand cmd = new SqlCommand(strDeleteGenre, con);
                 
-                int t = cmd.ExecuteNonQuery();
+                int rowAffected = cmd.ExecuteNonQuery();
 
-                if (t > 0)
+                if (rowAffected > 0)
                 {
                     Response.Write("<script>alert('Successfully delete genre')</script>");
                     GridViewGenre.EditIndex = -1;

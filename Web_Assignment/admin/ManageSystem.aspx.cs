@@ -84,9 +84,9 @@ namespace Web_Assignment.admin
                 string strUpdateSystem = "update System set os='" + operatingSystem + "', processor='" + processor + "', storage='" + storage + "' where systemId='" + id + "'";
                 SqlCommand cmd = new SqlCommand(strUpdateSystem, con);
 
-                int t = cmd.ExecuteNonQuery();
+                int rowAffected = cmd.ExecuteNonQuery();
 
-                if (t > 0)
+                if (rowAffected > 0)
                 {
                     Response.Write("<script>alert('Successfully update system into database')</script>");
                     GridViewSystem.EditIndex = -1;
@@ -113,9 +113,9 @@ namespace Web_Assignment.admin
                 String strDeleteSystem = "delete from System where systemId='" + id + "'";
                 SqlCommand cmd = new SqlCommand(strDeleteSystem, con);
 
-                int t = cmd.ExecuteNonQuery();
+                int rowAffected = cmd.ExecuteNonQuery();
 
-                if (t > 0)
+                if (rowAffected > 0)
                 {
                     Response.Write("<script>alert('Successfully delete genre')</script>");
                     GridViewSystem.EditIndex = -1;

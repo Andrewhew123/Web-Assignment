@@ -120,7 +120,7 @@ namespace Web_Assignment.admin
         {
             //System Input
             String nameInput = txtProductName.Text;
-            String descInput = Request.Form["txtDesc"].ToString();
+            String descInput = txtDesc.InnerText;
             double priceInput = double.Parse(txtPrice.Text);
             int genreInput = int.Parse(ddlGenre.SelectedValue);
             int systemInput = int.Parse(ddlSystem.SelectedValue);
@@ -138,9 +138,18 @@ namespace Web_Assignment.admin
             //Need sqlcommand to execute sql query
             SqlCommand cmd = new SqlCommand(strAddProduct, con);
 
-            cmd.ExecuteNonQuery();
-
+            int rowAffected = cmd.ExecuteNonQuery();
             con.Close();
+
+            if (rowAffected > 0 )
+            {
+                Response.Write("<script>alert('Successfully add product')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Failed to add product')</script>");
+            }
+
         }
     }
 }
