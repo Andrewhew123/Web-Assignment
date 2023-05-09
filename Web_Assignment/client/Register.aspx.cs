@@ -17,7 +17,7 @@ namespace Web_Assignment.client
         {
             if (IsPostBack)
             {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegisterConnectionString.ConnectionString"]);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings[]);
             }
         }
 
