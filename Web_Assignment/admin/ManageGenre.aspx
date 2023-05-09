@@ -6,7 +6,7 @@
         
 
         <!---------- Add Genre Form ---------->
-        <h1 class="text-white text-3xl mb-3">Add Genres</h1>
+        <h1 class="text-white text-3xl mb-3">Add Genre</h1>
         <hr />
 
         <br />
@@ -14,9 +14,11 @@
         <div class="text-white">
 
             <!----- Genre Name ----->
-            <div class="mb-6">
+            <div class="auto-style1">
                 <label class="block mb-2 text-sm font-medium" runat="server">Genre</label>
                 <asp:TextBox ID="txtGenre" runat="server" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Genre"></asp:TextBox>
+                 <!--- Genre Dropdown Validator --->
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorGenre" runat="server" ErrorMessage="Genre is required" ControlToValidate="txtGenre" ForeColor="#FF3300"></asp:RequiredFieldValidator>
             </div>
 
             <br />
@@ -99,3 +101,12 @@
     </div>
 
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style1 {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+    </style>
+</asp:Content>
+

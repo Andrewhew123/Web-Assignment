@@ -24,6 +24,15 @@ namespace Web_Assignment.admin
         protected global::System.Web.UI.WebControls.TextBox txtOperatingSystem;
 
         /// <summary>
+        /// RequiredFieldValidatorOS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorOS;
+
+        /// <summary>
         /// txtProcessor control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace Web_Assignment.admin
         protected global::System.Web.UI.WebControls.TextBox txtProcessor;
 
         /// <summary>
+        /// RequiredFieldValidatorProcessor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorProcessor;
+
+        /// <summary>
         /// txtStorage control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace Web_Assignment.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStorage;
+
+        /// <summary>
+        /// RequiredFieldValidatorStorage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorStorage;
 
         /// <summary>
         /// btnAddSystem control.
