@@ -12,18 +12,15 @@
         <!---------- Add Product Form ---------->
         <div class="text-white">
 
-            <!----- Display product image cover ----->
-            <div class="mb-6" style="justify-content: center; display: flex;">
-                <img alt="" src="../img/product/dead_space.jpg" class="object-cover h-70 w-60" style="border-radius: 10px;" />
-            </div>
             
             <!----- Upload product image ----->
-            <div style="text-align: center;" class="mb-6">
-                <asp:Button ID="btnProductImageUpload" runat="server" Text="Upload" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" />
+            <div class="mb-6">
+                <label class="block mb-2 text-sm font-medium" runat="server">Image</label>
                 <asp:FileUpload ID="FileUploadProductImage" runat="server"  />
+                <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorImageSelected" runat="server" ErrorMessage="No Image is selected" ControlToValidate="FileUploadProductImage" ForeColor="#FF3300"></asp:RequiredFieldValidator>
             </div>
 
-            <br />
 
             <!----- Product Name Input ----->
             <div class="mb-6">

@@ -19,7 +19,9 @@ namespace Web_Assignment.admin
             if (!IsPostBack)
             {
                 displayGenre();
+                
             }
+            
         }
 
         protected void displayGenre()
@@ -33,6 +35,13 @@ namespace Web_Assignment.admin
                 { 
                     GridViewGenre.DataSource= dr;
                     GridViewGenre.DataBind();
+                    LabelNoData.Style.Add("display", "none");
+                }
+                else
+                {
+                    GridViewGenre.DataSource = dr;
+                    GridViewGenre.DataBind();
+                    LabelNoData.Style.Add("display", "block");
                 }
             }
         }
@@ -40,6 +49,7 @@ namespace Web_Assignment.admin
 
         protected void btnAddGenre_Click(object sender, EventArgs e)
         {
+
             //Genre Input
             String genreInput = txtGenre.Text;
 
@@ -75,6 +85,7 @@ namespace Web_Assignment.admin
 
         protected void GridViewGenre_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+
             int id = Convert.ToInt32(GridViewGenre.DataKeys[e.RowIndex].Value.ToString());
             string genre = ((TextBox)GridViewGenre.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
 

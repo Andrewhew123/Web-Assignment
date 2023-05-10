@@ -15,13 +15,22 @@ namespace Web_Assignment.admin
     {
 
         /// <summary>
-        /// btnProductImageUpload control.
+        /// FileUploadProductImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProductImageUpload;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadProductImage;
+
+        /// <summary>
+        /// labelImageExisting control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelImageExisting;
 
         /// <summary>
         /// txtProductName control.

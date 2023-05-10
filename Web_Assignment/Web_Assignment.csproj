@@ -86,7 +86,6 @@
   <ItemGroup>
     <Content Include="admin\ManageGenre.aspx" />
     <Content Include="admin\AddProduct.aspx" />
-    <Content Include="admin\AddRole.aspx" />
     <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ManageProduct.aspx" />
@@ -162,6 +161,7 @@
     <Content Include="img\product\dead_space.jpg" />
     <Content Include="img\product\iarc_18.jpg" />
     <Content Include="img\product\macOS.png" />
+    <Content Include="img\product\No-image-found.jpg" />
     <Content Include="img\product\windows10.png" />
     <Content Include="img\aboutus\purpose.png" />
     <Content Include="img\aboutus\target.png" />
@@ -190,13 +190,6 @@
     </Compile>
     <Compile Include="admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\AddRole.aspx.cs">
-      <DependentUpon>AddRole.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\AddRole.aspx.designer.cs">
-      <DependentUpon>AddRole.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ManageSystem.aspx.cs">
       <DependentUpon>ManageSystem.aspx</DependentUpon>
