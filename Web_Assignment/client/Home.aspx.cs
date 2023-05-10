@@ -17,14 +17,7 @@ namespace Web_Assignment.client
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserName"] != null)
-            {
-                displayusername.Text = Session["UserName"].ToString();
-            }
-            else
-            {
-                Response.Redirect("Login.aspx");
-            
+
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 SqlDataAdapter adapter = new SqlDataAdapter("Select * from Product", con);
@@ -32,12 +25,8 @@ namespace Web_Assignment.client
                 adapter.Fill(dt);
                 RepeaterDisplayProduct.DataSource = dt;
                 RepeaterDisplayProduct.DataBind();
-                
-                
-                
             }
-            
-            
+
         }
 
         protected void RepeaterDisplayProduct_ItemCommand(object source, RepeaterCommandEventArgs e)

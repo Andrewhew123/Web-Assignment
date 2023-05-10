@@ -78,24 +78,6 @@ namespace Web_Assignment.admin
         protected global::System.Web.UI.WebControls.ContentPlaceHolder AddProduct;
 
         /// <summary>
-        /// AddGenre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AddGenre;
-
-        /// <summary>
-        /// AddSystem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AddSystem;
-
-        /// <summary>
         /// UpdateProduct control.
         /// </summary>
         /// <remarks>
@@ -103,24 +85,6 @@ namespace Web_Assignment.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder UpdateProduct;
-
-        /// <summary>
-        /// UpdateGenre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder UpdateGenre;
-
-        /// <summary>
-        /// UpdateSystem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder UpdateSystem;
 
         /// <summary>
         /// ManageRole control.
@@ -132,21 +96,12 @@ namespace Web_Assignment.admin
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ManageRole;
 
         /// <summary>
-        /// AddRole control.
+        /// AssignRoleUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AddRole;
-
-        /// <summary>
-        /// UpdateRole control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder UpdateRole;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder AssignRoleUser;
     }
 }

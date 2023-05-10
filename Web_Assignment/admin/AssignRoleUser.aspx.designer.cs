@@ -11,53 +11,62 @@ namespace Web_Assignment.admin
 {
 
 
-    public partial class Dashboard
+    public partial class UpdateRole
     {
 
         /// <summary>
-        /// totalOrder control.
+        /// ddlUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totalOrder;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUser;
 
         /// <summary>
-        /// totalProduct control.
+        /// RequiredFieldValidatorUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totalProduct;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorUser;
 
         /// <summary>
-        /// totalUser control.
+        /// ddlRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totalUser;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRole;
 
         /// <summary>
-        /// totalRole control.
+        /// RequiredFieldValidatorRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totalRole;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRole;
 
         /// <summary>
-        /// GridViewOrder control.
+        /// btnAssignRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewOrder;
+        protected global::System.Web.UI.WebControls.Button btnAssignRole;
+
+        /// <summary>
+        /// GridViewUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewUser;
 
         /// <summary>
         /// LabelNoData control.

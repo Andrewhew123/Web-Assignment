@@ -86,19 +86,23 @@
   <ItemGroup>
     <Content Include="admin\ManageGenre.aspx" />
     <Content Include="admin\AddProduct.aspx" />
-    <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ManageProduct.aspx" />
-    <Content Include="admin\ManageSystem.aspx" />
-    <Content Include="admin\UpdateGenre.aspx" />
     <Content Include="admin\ManageRole.aspx" />
     <Content Include="admin\Dashboard.aspx" />
+    <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\UpdateProduct.aspx" />
-    <Content Include="admin\UpdateRole.aspx" />
+    <Content Include="admin\AssignRoleUser.aspx" />
     <Content Include="App_Data\Galaxy.mdf" />
     <Content Include="App_Data\Galaxy_log.ldf" />
+    <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.xml" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\PayPal.dll" />
+    <Content Include="bin\PayPal.xml" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\csi.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
@@ -119,6 +123,10 @@
     <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
     <Content Include="bin\Web_Assignment.dll" />
     <Content Include="bin\Web_Assignment.pdb" />
     <Content Include="client\AboutUs.aspx" />
@@ -191,19 +199,19 @@
     <Compile Include="admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\ManageSystem.aspx.cs">
-      <DependentUpon>ManageSystem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\ManageSystem.aspx.designer.cs">
-      <DependentUpon>ManageSystem.aspx</DependentUpon>
-    </Compile>
     <Compile Include="admin\ManageRole.aspx.cs">
       <DependentUpon>ManageRole.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\ManageRole.aspx.designer.cs">
       <DependentUpon>ManageRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ManageSystem.aspx.cs">
+      <DependentUpon>ManageSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ManageSystem.aspx.designer.cs">
+      <DependentUpon>ManageSystem.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\UpdateProduct.aspx.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
@@ -212,12 +220,12 @@
     <Compile Include="admin\UpdateProduct.aspx.designer.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\UpdateRole.aspx.cs">
-      <DependentUpon>UpdateRole.aspx</DependentUpon>
+    <Compile Include="admin\AssignRoleUser.aspx.cs">
+      <DependentUpon>AssignRoleUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\UpdateRole.aspx.designer.cs">
-      <DependentUpon>UpdateRole.aspx</DependentUpon>
+    <Compile Include="admin\AssignRoleUser.aspx.designer.cs">
+      <DependentUpon>AssignRoleUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>

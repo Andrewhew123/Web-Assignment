@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="AdminMaster.Master" AutoEventWireup="true" CodeBehind="ManageSystem.aspx.cs" Inherits="Web_Assignment.admin.AddSystem" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="AddSystem" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ManageSystem" runat="Server">
     
     <div class="container mx-auto px-5">
 

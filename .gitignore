@@ -3,6 +3,19 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# dll file
+*.dll
+*.dll.config
+
+# mdf database
+*.mdf
+*.ldf
+*.xml
+*.csproj
+*.Web.config
+
+
+
 # User-specific files
 *.rsuser
 *.suo
