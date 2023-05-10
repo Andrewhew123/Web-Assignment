@@ -69,7 +69,7 @@
 
                 <!----- Menu option: Product ----->
                 <li>
-                    <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example-add-item">
+                    <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-product-option">
                         
                         <i class="fa fa-bars-progress m-1 text-gray-500"></i>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap">Product</span>
@@ -78,7 +78,7 @@
                         </svg>
                     </button>
 
-                    <ul id="dropdown-example-add-item" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-product-option" class="hidden py-2 space-y-2">
                         <li>
                             <a href="AddProduct.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Add Product</a>
                         </li>
@@ -91,10 +91,24 @@
 
                 <!----- Menu option: Role ----->
                 <li>
-                    <a href="ManageRole.aspx" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                         <i class="fa-solid fa-plus m-1 text-gray-500"></i>
-                        <span class="ml-3">Role</span>
-                    </a>
+                    <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-role-option">
+                        
+                        <i class="fa-solid fa-plus m-1 text-gray-500"></i>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Role</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <ul id="dropdown-role-option" class="hidden py-2 space-y-2">
+                        <li>
+                            <a href="ManageRole.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Manage Role</a>
+                        </li>
+                        <li>
+                            <a href="AssignRoleUser.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Assign User Role</a>
+                        </li>
+                    </ul>
+
                 </li>
 
 
@@ -123,25 +137,15 @@
                     <!----- Add item page ----->
                     <asp:ContentPlaceHolder ID="AddProduct" runat="server">
                     </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="AddGenre" runat="server">
-                    </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="AddSystem" runat="server">
-                    </asp:ContentPlaceHolder>
 
                     <!----- Update item page ----->
                     <asp:ContentPlaceHolder ID="UpdateProduct" runat="server">
-                    </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="UpdateGenre" runat="server">
-                    </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="UpdateSystem" runat="server">
                     </asp:ContentPlaceHolder>
 
                     <!----- Manage & Add Role ----->
                     <asp:ContentPlaceHolder ID="ManageRole" runat="server">
                     </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="AddRole" runat="server">
-                    </asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="UpdateRole" runat="server">
+                    <asp:ContentPlaceHolder ID="AssignRoleUser" runat="server">
                     </asp:ContentPlaceHolder>
 
                 </div>

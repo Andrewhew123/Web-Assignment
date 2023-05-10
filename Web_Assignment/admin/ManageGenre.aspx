@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="AdminMaster.Master" AutoEventWireup="true" CodeBehind="ManageGenre.aspx.cs" Inherits="Web_Assignment.admin.AddGenre" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="AddGenre" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ManageGenre" runat="Server">
     
     <div class="container mx-auto px-5">
         
