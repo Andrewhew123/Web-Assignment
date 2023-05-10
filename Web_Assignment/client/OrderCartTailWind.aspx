@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderCartTailWind.aspx.cs" Inherits="Web_Assignment.client.cart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="Web_Assignment.client.cart" %>
 
 <!DOCTYPE html>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
@@ -100,15 +100,15 @@
                             </div>
 
                             <div class="grid">
-                                <asp:Button ID="Button2" runat="server" Text="Checkout" class="btn bg-primary text-white py-3 text-lg w-full bg-indigo-600 hover:bg-indigo-700  shadow-sm text-base" />
+                                <asp:LinkButton ID="LinkButton1" runat="server" class="btn bg-primary text-white py-3 text-lg w-full bg-indigo-600 hover:bg-indigo-700  shadow-sm text-base" PostBackUrl="~/client/PaymentTailwind.aspx" >Checkout</asp:LinkButton>
                             </div>
                         </div>
 
                         
 
                         <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
-                            <span>or&nbsp&nbsp</span>                       
-                            <asp:Button ID="Button1" runat="server" Text="Continue Shopping" class="font-medium text-indigo-600 hover:text-indigo-500" />
+                            <span>or&nbsp&nbsp</span>         
+                            <asp:LinkButton ID="LinkButton2" runat="server" class="font-medium text-indigo-600 hover:text-indigo-500" PostBackUrl="~/client/Product.aspx" >Continue Shopping</asp:LinkButton>
                         </div>
 
                         <!--------------------------------------------------------------------->

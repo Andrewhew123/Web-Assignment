@@ -24,22 +24,13 @@ namespace Web_Assignment.client
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ddlPaymentMethod control.
+        /// onlineBanking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPaymentMethod;
-
-        /// <summary>
-        /// olineBanking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl olineBanking;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl onlineBanking;
 
         /// <summary>
         /// ddlBankType control.
@@ -69,30 +60,12 @@ namespace Web_Assignment.client
         protected global::System.Web.UI.WebControls.TextBox txtAccountPassword;
 
         /// <summary>
-        /// touchNGo control.
+        /// btnPay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl touchNGo;
-
-        /// <summary>
-        /// txtContactNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContactNumber;
-
-        /// <summary>
-        /// txtPin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPin;
+        protected global::System.Web.UI.WebControls.LinkButton btnPay;
     }
 }

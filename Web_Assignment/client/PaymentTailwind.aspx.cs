@@ -20,70 +20,18 @@ namespace Web_Assignment.client
             disabledAll();
         }
 
-        protected void ddlPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (ddlPaymentMethod.SelectedIndex)
-            {
-                case 0:
-                    displayOnlineBankingDetails();
-                    break;
-                case 1:
-                    displayTouchNGoDetails();
-                    break;
-                default:
-                    displayNonePaymentDetails();
-                    break;
-
-            }
-
-        }
-
-        private void displayOnlineBankingDetails()
-        {
-
-            olineBanking.Style.Add("display", "block");
-            touchNGo.Style.Add("display", "none");
-            //touchNGo.Visible = false;
-            resetTextField();
-
-        }
-
-        private void displayTouchNGoDetails()
-        {
-            olineBanking.Style.Add("display", "none");
-            touchNGo.Style.Add("display", "block");
-            //olineBanking.Visible = false;
-            //touchNGo.Visible = true;
-            resetTextField();
-
-        }
-
-        private void displayNonePaymentDetails()
-        {
-
-            olineBanking.Style.Add("display", "none");
-            touchNGo.Style.Add("display", "none");
-            resetTextField();
-        }
-
         private void disabledAll()
         {
-            ddlPaymentMethod.Enabled = false;
             ddlBankType.Enabled = false;
             txtAccountNumber.Enabled = false;
             txtAccountPassword.Enabled = false;
-            txtContactNumber.Enabled = false;
-            txtPin.Enabled = false;
-            //btnPayNow.Enabled = false;
-
+            btnPay.Enabled = false;
         }
 
         private void resetTextField()
         {
             txtAccountNumber.Text = string.Empty;
             txtAccountPassword.Text = string.Empty;
-            txtContactNumber.Text = string.Empty;
-            txtPin.Text = string.Empty;
         }
 
 
@@ -102,5 +50,6 @@ namespace Web_Assignment.client
         {
             Response.Redirect("~/client/GameLibrary.aspx");
         }
+
     }
 }
