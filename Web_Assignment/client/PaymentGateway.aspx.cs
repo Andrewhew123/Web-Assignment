@@ -57,7 +57,7 @@ namespace Web_Assignment.client
             Response.Write("<input type='hidden' name='item_name' value='Order ID: " + orderId + "'>");
             Response.Write("<input type='hidden' name='item_number' value='0'>");
             Response.Write("<input type='hidden' name='amount' value='" + Session["finaltotal"].ToString() + "'>");
-            Response.Write("<input type='hidden' name='return' value='https://localhost:44325/Customer/PaymentSuccess.aspx?order=" + orderId.ToString() + "'>");
+            Response.Write("<input type='hidden' name='return' value='https://localhost:44371/client/PaymentSuccess.aspx?order=" + orderId.ToString() + "'>");
             Response.Write("</form>");
 
             Response.Write("<script type='text/javascript'>");
