@@ -15,6 +15,8 @@
             <asp:GridView ID="GridViewProduct" runat="server" AutoGenerateColumns="False" CssClass="table w-full text-sm text-left text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600" DataKeyNames="productId" OnRowDeleting="GridViewProduct_RowDeleting" OnRowEditing="GridViewProduct_RowEditing" >
                 <Columns>
                     <asp:BoundField DataField="productId" HeaderText="Id" ReadOnly="True" />
+                    <asp:ImageField HeaderText="Cover Image" DataImageUrlField="image" ControlStyle-Width="60" ControlStyle-Height="60" DataImageUrlFormatString="~/img/product/productCover/{0}" NullImageUrl="~/img/product/No-image-found.jpg" >
+                    </asp:ImageField>
                     <asp:BoundField DataField="name" HeaderText="Name" />
                     <asp:BoundField DataField="description" HeaderText="Description" />
                     <asp:BoundField DataField="price" HeaderText="Price" />
@@ -22,14 +24,20 @@
                     <asp:BoundField DataField="os" HeaderText="System" />
                     <asp:BoundField DataField="processor" HeaderText="Processor" />
                     <asp:BoundField DataField="storage" HeaderText="Storage" />
-                   
-                    <asp:CommandField ButtonType="Button" ShowEditButton="True" ControlStyle-CssClass="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" />
-                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ControlStyle-CssClass="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black" />
+                    
+                    <asp:CommandField ButtonType="Button" ShowEditButton="True" ControlStyle-CssClass="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500" >
+<ControlStyle CssClass="btn btn-success btn-sm rounded-0 border-green-500 hover:border-green-500 bg-white hover:bg-green-500"></ControlStyle>
+                    </asp:CommandField>
+                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ControlStyle-CssClass="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black" >
+                    
+<ControlStyle CssClass="btn btn-damage btn-sm rounded-0 border-red-500 hover:border-red-500 bg-white hover:bg-red-500 text-black"></ControlStyle>
+                    </asp:CommandField>
                     
                 </Columns>
             </asp:GridView>
 
-            
+            <asp:Label ID="LabelNoData" runat="server" Text="No product in database" style="display: none;" CssClass="text-white"></asp:Label>
+
         </div>
 
 

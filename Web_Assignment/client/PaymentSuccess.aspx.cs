@@ -11,7 +11,6 @@ using System.Configuration;
 namespace Web_Assignment.client
 {
     public partial class PaymentSuccess : System.Web.UI.Page
-    {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Galaxy.mdf;Integrated Security=True;";
         string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)

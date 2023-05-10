@@ -94,8 +94,6 @@
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\UpdateProduct.aspx" />
     <Content Include="admin\UpdateRole.aspx" />
-    <Content Include="App_Data\Galaxy.mdf" />
-    <Content Include="App_Data\Galaxy_log.ldf" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\roslyn\csc.exe" />
