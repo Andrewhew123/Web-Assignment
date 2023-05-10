@@ -51,5 +51,9 @@ namespace Web_Assignment.client
             Response.Redirect("~/client/GameLibrary.aspx");
         }
 
+        protected void btnPay_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/client/PaymentGateway.aspx");
+        }
     }
 }

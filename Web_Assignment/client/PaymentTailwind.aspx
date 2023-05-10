@@ -98,7 +98,7 @@
                                     <br>
 
                                     <div class="text-center">
-                                        <asp:LinkButton ID="btnPay" runat="server" class="btn bg-primary text-white py-3 text-lg w-full bg-indigo-600 hover:bg-indigo-700  shadow-sm text-base">Pay Now</asp:LinkButton>
+                                        <asp:LinkButton ID="btnPay" runat="server" class="btn bg-primary text-white py-3 text-lg w-full bg-indigo-600 hover:bg-indigo-700  shadow-sm text-base" onClick="btnPay_Click">Pay Now</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>
