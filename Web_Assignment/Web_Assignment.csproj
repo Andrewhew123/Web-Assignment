@@ -103,6 +103,7 @@
     <Content Include="bin\Web_Assignment.dll" />
     <Content Include="bin\Web_Assignment.pdb" />
     <Content Include="client\AboutUs.aspx" />
+    <Content Include="client\GameLibraryTailWind.aspx" />
     <Content Include="client\OrderCartTailWind.aspx" />
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="admin\ManageProduct.aspx.designer.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\GameLibraryTailWind.aspx.cs">
+      <DependentUpon>GameLibraryTailWind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\GameLibraryTailWind.aspx.designer.cs">
+      <DependentUpon>GameLibraryTailWind.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\OrderCartTailWind.aspx.cs">
       <DependentUpon>OrderCartTailWind.aspx</DependentUpon>
