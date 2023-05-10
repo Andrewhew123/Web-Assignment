@@ -11,7 +11,7 @@ namespace Web_Assignment.client
 {
     public partial class PaymentSuccess : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;ATTACHDbFilename=D:\shopping_website\App_Data\Galaxy.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Galaxy.mdf;Integrated Security=True;");
         string order = "";
         string orderId;
         string s;
@@ -19,14 +19,13 @@ namespace Web_Assignment.client
         string[] a = new string[6];
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.Open();
             order = Request.QueryString["Order"].ToString();
 
             if (order == Session["order_number"].ToString())
             {
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from registration where email ='" + Session["user"].ToString() + "'";
+                cmd.CommandText = "select * from [User] where email ='" + Session["user"].ToString() + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -35,14 +34,14 @@ namespace Web_Assignment.client
                 {
                     SqlCommand cmd1 = con.CreateCommand();
                     cmd1.CommandType = CommandType.Text;
-                    cmd1.CommandText = "insert into orders value('" + dr["orderDate"].ToString() + "','" + dr["userId"].ToString() + "','" + dr["paymentId"].ToString() + "')";
+                    cmd1.CommandText = "insert into [Order] values ('" + dr["@orderDate"].ToString() + "','" + dr["@userId"].ToString() + "','" + dr["@paymentId"].ToString() + "')";
                     cmd1.ExecuteNonQuery();
 
 
                 }
                 SqlCommand cmd2 = con.CreateCommand();
                 cmd2.CommandType = CommandType.Text;
-                cmd2.CommandText = "select top 1 * from Order where email='" + Session["user"].ToString() + "' order by id desc ";
+                cmd2.CommandText = "select top 1 * from [Order] where email='" + Session["user"].ToString() + "' order by id desc ";
                 cmd2.ExecuteNonQuery();
                 DataTable dt2 = new DataTable();
                 SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
@@ -67,7 +66,7 @@ namespace Web_Assignment.client
 
                         SqlCommand cmd3 = con.CreateCommand();
                         cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "insert into order_details values('" + orderId.ToString() + "','" + a[0].ToString() + "','" + a[2].ToString() + "','" + a[3].ToString() + "','" + a[4].ToString() + "')";
+                        cmd3.CommandText = "insert into [OrderItem] values('" + orderId.ToString() + "','" + a[0].ToString() + "','" + a[2].ToString() + "','" + a[3].ToString() + "','" + a[4].ToString() + "')";
                         cmd3.ExecuteNonQuery();
 
                     }
