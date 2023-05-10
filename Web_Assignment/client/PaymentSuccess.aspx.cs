@@ -6,82 +6,128 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Web_Assignment.client
 {
     public partial class PaymentSuccess : System.Web.UI.Page
     {
-        private readonly string connectionString = @"Data Source=.\SQLEXPRESS;ATTACHDbFilename=D:\shopping_website\App_Data\Galaxy.mdf;Integrated Security=True;";
-
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Galaxy.mdf;Integrated Security=True;";
+        string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string orderNumber = Request.QueryString["Order"]?.ToString();
-            if (string.IsNullOrEmpty(orderNumber) || orderNumber != Session["order_number"]?.ToString())
+            if (!IsPostBack)
             {
-                Response.Redirect("GameLibrary.aspx");
-                return;
+                InsertData();
             }
-
+            //string email = Session["user"].ToString();
+            // Get user data from the database
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                con.Open();
-
-                DataTable userData = GetUserData(con);
-                if (userData == null || userData.Rows.Count == 0)
-                {
-                    con.Close();
-                    Response.Redirect("GameLibrary.aspx");
-                    return;
-                }
-
-                foreach (DataRow userRow in userData.Rows)
-                {
-                    InsertOrder(con, userRow);
-                }
-
-                string orderId = GetOrderId(con);
-                if (!string.IsNullOrEmpty(orderId))
-                {
-                    InsertOrderDetails(con, orderId);
-                }
-
-                con.Close();
+                //DataTable userData = GetUserData(con, email);
+                //if (userData.Rows.Count > 0)
+                //{
+                    //DataRow userRow = userData.Rows[0];
+                    // Insert the order into the database
+                    //InsertOrder(con, userRow);
+                    // Get the order ID from the database
+                    //string orderId = GetOrderId(con, userRow["id"].ToString());
+                    // Insert the order details into the database
+                    //if (!string.IsNullOrEmpty(orderId))
+                   // {
+                     //   InsertOrderDetails(con, orderId);
+                   // }
+                //}
             }
-
-            Session["user"] = "";
-            Response.Cookies["aa"].Expires = DateTime.Now.AddDays(-1);
         }
 
-        private DataTable GetUserData(SqlConnection con)
+
+        private DataTable GetUserData(SqlConnection con, string email)
         {
+            con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM User WHERE email = @email";
-            cmd.Parameters.AddWithValue("@email", Session["user"].ToString());
+            cmd.CommandText = "SELECT * FROM [User] WHERE email = @email";
+            cmd.Parameters.AddWithValue("@email", email);
             DataTable userData = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(userData);
+            con.Close();
             return userData;
         }
 
-        private void InsertOrder(SqlConnection con, DataRow userRow)
+
+        /*private void InsertOrder(SqlConnection con, DataRow userRow)
         {
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Order VALUES (@orderid, @orderDate, @userId, @paymentId)";
-            cmd.Parameters.AddWithValue("@orderDate", userRow["orderDate"].ToString());
-            cmd.Parameters.AddWithValue("@userId", userRow["userId"].ToString());
-            cmd.Parameters.AddWithValue("@orderId", userRow["orderId"].ToString());
-            cmd.Parameters.AddWithValue("@paymentId", userRow["paymentId"].ToString());
-            cmd.ExecuteNonQuery();
+            Guid newGuid = Guid.NewGuid();
+            con.Open();
+            string insertQuery = "INSERT INTO [Order] (orderDate, userID, orderId, amount) VALUES (@orderDate, @userId, @orderId, @amount)";
+            using (SqlCommand com = new SqlCommand(insertQuery, con))
+            {
+                com.Parameters.Add(new SqlParameter("@orderDate", SqlDbType.DateTime)).Value = DateTime.Now;
+                com.Parameters.Add(new SqlParameter("@userId", SqlDbType.NVarChar)).Value = newGuid;
+                com.Parameters.Add(new SqlParameter("@orderId", SqlDbType.Int)).Value = newGuid;
+                com.Parameters.Add(new SqlParameter("@amount", SqlDbType.Decimal)).Value = GetOrderTotal();
+                com.ExecuteNonQuery();
+            }
+            con.Close();
+        }*/
+
+        private void InsertData()
+        {
+
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                con.Open();
+                Guid newGuid = Guid.NewGuid();
+                //SQL Statement
+                string strAddOrder = "insert into [dbo].[Order] (orderDate, userID, amount) values (@orderDate, @userId, @amount)";
+
+                //Need sqlcommand to execute sql query
+                SqlCommand cmd = new SqlCommand(strAddOrder, con);
+                cmd.Parameters.AddWithValue("@orderDate", DateTime.Now);
+                cmd.Parameters.AddWithValue("@userId", "bbbc21d4-1f38-4329-bc2c-52f0744da1f1");
+                cmd.Parameters.AddWithValue("@amount", 10.00);
+                int rowAffected = cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Success')</script>");
+
+            }
+
         }
 
-        private string GetOrderId(SqlConnection con)
+        private decimal GetOrderTotal()
         {
+            if (Request.Cookies["aa"] != null)
+            {
+                string cookieValue = Request.Cookies["aa"].Value;
+                string[] orders = cookieValue.Split('|');
+                decimal total = 0;
+                foreach (string order in orders)
+                {
+                    string[] orderDetails = order.Split(',');
+                    if (orderDetails.Length < 5)
+                    {
+                        continue;
+                    }
+                    decimal price = decimal.Parse(orderDetails[2]);
+                    int quantity = int.Parse(orderDetails[3]);
+                    total += price * quantity;
+                    total = 106;
+                }
+                return total;
+            }
+            return 0;
+        }
+
+
+        private string GetOrderId(SqlConnection con, string userId)
+        {
+            con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT TOP 1 * FROM [Order] WHERE email = @email ORDER BY id DESC";
-            cmd.Parameters.AddWithValue("@email", Session["user"].ToString());
+            cmd.CommandText = "SELECT TOP 1 * FROM [Order] WHERE userID = @userId ORDER BY id DESC";
+            cmd.Parameters.AddWithValue("@userId", userId);
             DataTable orderIdData = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(orderIdData);
@@ -89,6 +135,7 @@ namespace Web_Assignment.client
             {
                 return null;
             }
+            con.Close();
             return orderIdData.Rows[0]["id"].ToString();
         }
 
@@ -108,14 +155,18 @@ namespace Web_Assignment.client
                 {
                     continue;
                 }
-
+                con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO [OrderItem] VALUES (@orderId, @productId)";
                 cmd.Parameters.AddWithValue("@orderId", orderId);
                 cmd.Parameters.AddWithValue("@productId", orderDetails[0]);
+                cmd.ExecuteNonQuery();
+                con.Close();
             }
         }
+
+
     }
 }
 
