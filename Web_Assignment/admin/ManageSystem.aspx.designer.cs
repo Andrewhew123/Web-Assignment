@@ -11,61 +11,79 @@ namespace Web_Assignment.admin
 {
 
 
-    public partial class ManageSystem
+    public partial class AddSystem
     {
 
         /// <summary>
-        /// LinkButton1 control.
+        /// txtOperatingSystem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.TextBox txtOperatingSystem;
 
         /// <summary>
-        /// LinkButton2 control.
+        /// RequiredFieldValidatorOS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorOS;
 
         /// <summary>
-        /// LinkButton3 control.
+        /// txtProcessor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+        protected global::System.Web.UI.WebControls.TextBox txtProcessor;
 
         /// <summary>
-        /// LinkButton4 control.
+        /// RequiredFieldValidatorProcessor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorProcessor;
 
         /// <summary>
-        /// LinkButton5 control.
+        /// txtStorage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
+        protected global::System.Web.UI.WebControls.TextBox txtStorage;
 
         /// <summary>
-        /// LinkButton6 control.
+        /// RequiredFieldValidatorStorage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton6;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorStorage;
+
+        /// <summary>
+        /// btnAddSystem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddSystem;
+
+        /// <summary>
+        /// GridViewSystem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewSystem;
     }
 }

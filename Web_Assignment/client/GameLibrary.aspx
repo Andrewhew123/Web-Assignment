@@ -46,9 +46,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button8" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton8" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="btnReview" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -72,9 +70,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button1" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton7" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button1" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -98,9 +94,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button2" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton6" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button2" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -124,9 +118,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button3" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton5" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button3" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -154,9 +146,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button4" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton1" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button4" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -180,9 +170,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button5" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton2" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button5" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -206,9 +194,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button6" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton3" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button6" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>
@@ -233,9 +219,7 @@
 
                         <br />
 
-                        <asp:Button ID="Button7" runat="server" Text="Play" CssClass="btn btn-info"/>
-                        &nbsp&nbsp
-                        <asp:LinkButton ID="LinkButton4" runat="server" style="color: white; font-size: 15px;" OnClick="LinkButtonEditReview_Click">Review</asp:LinkButton>
+                        <asp:Button ID="Button7" runat="server" Text="Review" CssClass="btn btn-info" OnClick="LinkButtonEditReview_Click" style="text-align: center;" />
                         
                     </div>
                 </div>

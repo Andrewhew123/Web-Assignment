@@ -11,8 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
 </script>
-    <title>Index
-    </title>
+    <title>Index</title>
 
 </head>
 
@@ -76,7 +75,7 @@
                                 <span class="font-bold text-lg">8 Items</span>
                                 <span class="text-info">Subtotal: $999</span>
                                 <div class="card-actions">
-                                    <button class="btn btn-primary btn-block">View cart</button>
+                                    <a href="OrderCart.aspx" class="btn btn-primary btn-block">View cart</a>
                                 </div>
                             </div>
                         </div>
@@ -114,132 +113,46 @@
             </div>
         </div>
     </div>
-    </br>
+
+
     <br />
     <h1 class="text-3xl" id="Browse">&nbsp;&nbsp; Hot Games ></h1>
+    
+    <form id="form" runat="server">
+
     <div>
         <div class="carousel carousel-center max-w-full p-6 space-x-7 bg-neutral rounded-box bg-zinc-900">
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
+            
+            <!---------- Product Item Repeater ---------->
+            <asp:Repeater ID="RepeaterDisplayProduct" runat="server" OnItemCommand="RepeaterDisplayProduct_ItemCommand">
+                <ItemTemplate>
+                    <div class="carousel-item">
+                        <div class="card w-96 glass">
+                            <figure>
+                                <img src="../img/mh.jpg" alt='<%#Eval("name") %>' style="width: 300px; height: 300px;" />
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title"><%#Eval("name") %></h2>
+                                <p><%#Eval("description") %></p>
+                                <div class="card-actions justify-end">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-primary m-4" PostBackUrl='<%# "~/client/Product.aspx?id=" + HttpUtility.UrlEncode(Eval("productId").ToString()) %>'><%#Eval("price") %></asp:LinkButton>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </ItemTemplate>
+            </asp:Repeater>
 
-            </div>
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
-                        </div>
-                    </div>
-                </div>
+            
 
-            </div>
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="carousel-item">
-                <div class="card w-96 glass">
-                    <figure>
-                        <img src="../img/mh.jpg" alt="Monster Hunter" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Monster Hunter: World</h2>
-                        <p>Battle gigantic monsters in epic locales. As a hunter, you'll take on quests to hunt monsters in a variety of habitats. </p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary m-4">RM288.99</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div>
-            <div class="m-auto card lg:card-side bg-zinc-900 shadow-xl outline p-5 w-11/12">
-                <figure>
-                    <img src="../img/mh.jpg" class="h-80" alt="Album" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">New Game Announced!</h2>
-                    <p>Legendary developer Lee Wee Yan has announced the developement of a new, cutting-edge game!</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-    </div>
+
+     </div>
+
+    </form>
+
 </body>
+
 <footer class="footer p-10 bg-black text-base-content">
     <div>
         <span class="footer-title">Company</span>
