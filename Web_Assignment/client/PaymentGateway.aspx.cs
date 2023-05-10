@@ -6,8 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using PayPal;
-
 
 namespace Web_Assignment.client
 {
@@ -16,20 +14,19 @@ namespace Web_Assignment.client
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
-            DataTable dt = new DataTable();
-            dt = (DataTable)Session["buyitems"];
-            int nrow = dt.Rows.Count;
+            //DataTable dt = new DataTable();
+           // dt = (DataTable)Session["buyitems"];
+            //int nrow = dt.Rows.Count;
             int i = 0;
             int orderId;
             decimal totalprice = 100;
             decimal finaltotal = 100;
 
-            while (i < nrow)
-            {
-                totalprice = totalprice + Convert.ToDecimal(dt.Rows[i]["totalprice"].ToString());
-                i = i + 1;
-            }
+            //while (i < nrow)
+            //{
+            //    totalprice = totalprice + Convert.ToDecimal(dt.Rows[i]["totalprice"].ToString());
+            //    i = i + 1;
+            //}
             decimal tax = totalprice * 0.06M;
             string taxFormatted = tax.ToString("0.00");
             finaltotal = totalprice + tax;
@@ -50,13 +47,12 @@ namespace Web_Assignment.client
             orderId++; // Increment the order ID for the next order
             scon.Close();
 
-
             //here we implement Paypal
             Session["orderId"] = orderId.ToString();
 
             Response.Write("<form action='https://www.sandbox.paypal.com/cgi-bin/webscr' method='post' name='buyCredits' id='buyCredits'>");
             Response.Write("<input type='hidden' name='cmd' value='_xclick'>");
-            Response.Write("<input type='hidden' name='business' value='sb-8sw5l25586641_api1.business.example.com'>");
+            Response.Write("<input type='hidden' name='business' value='sb-8sw5l25586641@business.example.com'>"); // fixed value of paypalemail
             Response.Write("<input type='hidden' name='currency_code' value='MYR'>");
             Response.Write("<input type='hidden' name='item_name' value='Order ID: " + orderId + "'>");
             Response.Write("<input type='hidden' name='item_number' value='0'>");
@@ -71,19 +67,18 @@ namespace Web_Assignment.client
 
         public decimal grandtotal()
         {
-            DataTable dt = new DataTable();
-            dt = (DataTable)Session["buyitems"];
-            int nrow = dt.Rows.Count;
+            //DataTable dt = new DataTable();
+            //dt = (DataTable)Session["buyitems"];
+            //int nrow = dt.Rows.Count;
             int i = 0;
             decimal totalprice = 0;
 
-            while (i < nrow)
-            {
-                totalprice = totalprice + Convert.ToDecimal(dt.Rows[i]["totalprice"].ToString());
-                i = i + 1;
-            }
+           // while (i < nrow)
+           // {
+            //    totalprice = totalprice + Convert.ToDecimal(dt.Rows[i]["totalprice"].ToString());
+            //    i = i + 1;
+            //}
             return totalprice;
         }
     }
 }
-
