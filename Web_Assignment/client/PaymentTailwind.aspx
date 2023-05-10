@@ -37,7 +37,7 @@
                             <div class="form-group">
                         
                                 <label>Bank Type</label>
-                                <asp:DropDownList ID="ddlBankType" runat="server" CssClass="text-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center flex w-full">
+                                <asp:DropDownList ID="ddlBankType" runat="server" CssClass="text-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 inline-flex items-center flex w-full">
                                     <asp:ListItem>Maybank</asp:ListItem>
                                     <asp:ListItem>Public Bank</asp:ListItem>
                                     <asp:ListItem>Hong Leong</asp:ListItem>

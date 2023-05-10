@@ -21,6 +21,7 @@ namespace Web_Assignment.admin
                 BindReaderData_Genre();
                 BindReaderData_System();
             }
+
         }
 
         /*
@@ -124,31 +125,46 @@ namespace Web_Assignment.admin
             double priceInput = double.Parse(txtPrice.Text);
             int genreInput = int.Parse(ddlGenre.SelectedValue);
             int systemInput = int.Parse(ddlSystem.SelectedValue);
+            String ImagefileName = null;
 
-
-            SqlConnection con;
-
-
-            con = new SqlConnection(strCon);
-            con.Open();
-
-            //SQL Statement
-            string strAddProduct = "insert into Product (name, description, price, genreId, systemId) values('" + nameInput + "', '" + descInput + "', '" + priceInput + "', '" + genreInput + "', '" + systemInput + "')";
-
-            //Need sqlcommand to execute sql query
-            SqlCommand cmd = new SqlCommand(strAddProduct, con);
-
-            int rowAffected = cmd.ExecuteNonQuery();
-            con.Close();
-
-            if (rowAffected > 0 )
+            if (FileUploadProductImage.HasFile)
             {
-                Response.Write("<script>alert('Successfully add product')</script>");
+                string strname = FileUploadProductImage.FileName.ToString();
+                FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/product/productCover/") + strname);
+                ImagefileName = strname;
+
+
+                SqlConnection con;
+
+                con = new SqlConnection(strCon);
+                con.Open();
+
+                //SQL Statement
+                string strAddProduct = "insert into Product (name, description, price, genreId, systemId) values('" + nameInput + "', '" + descInput + "', '" + priceInput + "', '" + genreInput + "', '" + systemInput + "')";
+
+                //Need sqlcommand to execute sql query
+                SqlCommand cmd = new SqlCommand(strAddProduct, con);
+
+                int rowAffected = cmd.ExecuteNonQuery();
+                con.Close();
+
+                if (rowAffected > 0)
+                {
+                    Response.Write("<script>alert('Successfully add product')</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Failed to add product')</script>");
+                }
+
+
             }
             else
             {
-                Response.Write("<script>alert('Failed to add product')</script>");
+                ImagefileName = null;
             }
+
+            
 
         }
     }
