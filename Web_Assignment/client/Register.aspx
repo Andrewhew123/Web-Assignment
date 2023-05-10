@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/account.css" />
     <title></title>
     <style type="text/css">
         .auto-style2 {
@@ -69,15 +69,14 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
         <img src="../img/account/galaxy.png" alt="GALAXY" class="topic" />
 
         <br />
         <br />
+        <br />
         <table class="auto-style2">
             <tr>
-                <td class="auto-style8" id="label">Username :</td>
+                <td class="auto-style8" id="label">Username :&nbsp;&nbsp; </td>
                 <td class="auto-style7">
                     <asp:TextBox ID="usernametxt" runat="server" class="box"></asp:TextBox>
                 </td>
@@ -86,10 +85,12 @@
                 <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style7">
                     <asp:RequiredFieldValidator class="errormessage" ID="RequiredFieldValidator1" runat="server" ControlToValidate="usernametxt" ErrorMessage="Username is required." ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:Label class="errormessage" ID="userexist" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8" id="label">Email :</td>
+                <td class="auto-style8" id="label">Email :&nbsp;&nbsp; </td>
                 <td class="auto-style7">
                     <asp:TextBox ID="emailtxt" runat="server" class="box" placeholder="abc@gmail.com"></asp:TextBox>
                     <br />
@@ -106,7 +107,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11" id="label">Password :</td>
+                <td class="auto-style11" id="label">Password :&nbsp;&nbsp; </td>
                 <td class="auto-style12" id="passwordformat">
                     <asp:TextBox ID="passwordtxt" runat="server" class="box" placeholder="abcd1234" OnTextChanged="passwordtxt_TextChanged" TextMode="Password"></asp:TextBox>
                     &nbsp;<br />
@@ -121,7 +122,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style9" id="label">Confirm Password : </td>
+                <td class="auto-style9" id="label">Confirm Password :&nbsp;&nbsp; </td>
                 <td class="auto-style6">
                     <asp:TextBox ID="confirmpassword" runat="server" class="box" TextMode="Password"></asp:TextBox>
                 </td>
@@ -133,9 +134,9 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style9" id="label">Region :</td>
+                <td class="auto-style9" id="label">Region :&nbsp;&nbsp; </td>
                 <td class="auto-style6">
-                    <asp:DropDownList class="regiondropdown" ID="DropDownList1" runat="server" Width="180px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                    <asp:DropDownList class="regiondropdown" ID="regiontxt" runat="server" Width="180px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                         <asp:ListItem>Malaysia</asp:ListItem>
                         <asp:ListItem>India</asp:ListItem>
                         <asp:ListItem>Japan</asp:ListItem>
@@ -149,28 +150,24 @@
             <tr>
                 <td class="auto-style9">&nbsp;</td>
                 <td class="auto-style6">
-                    <asp:RequiredFieldValidator class="errormessage" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please select a region" ForeColor="Red" ControlToValidate="DropDownList1"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator class="errormessage" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please select a region" ForeColor="Red" ControlToValidate="regiontxt"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RegisterConnectionString %>" SelectCommand="SELECT * FROM [User]" SelectQuery="<%$ ConnectionStrings:RegisterConnectionString %>"></asp:SqlDataSource>
-                </td>
+                <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style13">
-
-                    <asp:Button ID="register" runat="server" Text="Register" class="registerbtn" OnClick="register_Click1" />
+                    <asp:Button ID="register" runat="server" Text="Register" class="submitbtn" OnClick="register_Click1" />
 
                 </td>
             </tr>
         </table>
 
-        <p class="password">
-            &nbsp;&nbsp;
-            <br />
-            <p class="account">
-                Already have account? 
+        <br />
+        <br />
+        <p class="account">
+            Already have account? 
         <asp:HyperLink ID="login" runat="server" class="hyper" NavigateUrl="~/client/Login.aspx">Log In</asp:HyperLink>
-            </p>
+        </p>
     </form>
 </body>
 </html>

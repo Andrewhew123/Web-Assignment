@@ -11,7 +11,14 @@ namespace Web_Assignment.client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserName"] != null)
+            {
+                displayusername.Text = Session["UserName"].ToString();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }
