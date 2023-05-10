@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +11,7 @@ using System.Configuration;
 namespace Web_Assignment.client
 {
     public partial class PaymentSuccess : System.Web.UI.Page
+    {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Galaxy.mdf;Integrated Security=True;";
         string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
@@ -162,11 +163,25 @@ namespace Web_Assignment.client
                 cmd.Parameters.AddWithValue("@productId", orderDetails[0]);
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+                SqlCommand cmd2 = con.CreateCommand();
+                cmd2.CommandType = CommandType.Text;
+                cmd2.CommandText = "select top 1 * from [Order] where email='" + Session["user"].ToString() + "' order by id desc ";
+                cmd2.ExecuteNonQuery();
+                DataTable dt2 = new DataTable();
+                SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+                da2.Fill(dt2);
+                foreach (DataRow dr2 in dt2.Rows)
+                {
+                    orderId = dr2["id"].ToString();
+                }
             }
         }
 
 
     }
 }
+
+
 
 

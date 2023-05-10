@@ -86,10 +86,11 @@
   <ItemGroup>
     <Content Include="admin\ManageGenre.aspx" />
     <Content Include="admin\AddProduct.aspx" />
-    <Content Include="admin\AddRole.aspx" />
     <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ManageProduct.aspx" />
+    <Content Include="admin\ManageSystem.aspx" />
+    <Content Include="admin\UpdateGenre.aspx" />
     <Content Include="admin\ManageRole.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\UpdateProduct.aspx" />
@@ -134,9 +135,8 @@
     <Content Include="css\aboutus.css" />
     <Content Include="css\cart.css" />
     <Content Include="css\header.css" />
-    <Content Include="css\login.css" />
     <Content Include="css\payment.css" />
-    <Content Include="css\register.css" />
+    <Content Include="css\account.css" />
     <Content Include="css\userprofile.css" />
     <Content Include="img\aboutus\andrew.png" />
     <Content Include="img\aboutus\tzenyang.png" />
@@ -159,6 +159,7 @@
     <Content Include="img\product\dead_space.jpg" />
     <Content Include="img\product\iarc_18.jpg" />
     <Content Include="img\product\macOS.png" />
+    <Content Include="img\product\No-image-found.jpg" />
     <Content Include="img\product\windows10.png" />
     <Content Include="img\aboutus\purpose.png" />
     <Content Include="img\aboutus\target.png" />
@@ -187,13 +188,6 @@
     </Compile>
     <Compile Include="admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\AddRole.aspx.cs">
-      <DependentUpon>AddRole.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\AddRole.aspx.designer.cs">
-      <DependentUpon>AddRole.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ManageSystem.aspx.cs">
       <DependentUpon>ManageSystem.aspx</DependentUpon>
