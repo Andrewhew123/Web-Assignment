@@ -17,7 +17,7 @@
         <br />
         <!------------------------------ Tailwind ------------------------------>
     <div class="container mx-auto px-10">
-        <h1 style="color:white; margin-bottom:25px" class="text-3xl">My Cart</h1>
+        <h1 style="color:white; margin-bottom:25px" class="text-3xl font-semibold">My Cart</h1>
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-8">
 
@@ -66,7 +66,7 @@
             </div>
             
             <div class="col-span-4 md:ps-3">
-                <h3 class="text-white mb-7 inline-block">
+                <h3 class="text-white mb-7 inline-block text-3xl font-normal">
                     Game Prices Summary
                 </h3>
                 
@@ -82,18 +82,18 @@
                     </div>
                     
                     <div class="md:col-auto">
-                        <%--<button id="btnSubmit" class="btn bg-info text-white mt-5">Submit</button>--%>
-                        <asp:Button ID="btnSubmit" runat="server" CssClass="btn bg-info text-white mt-5" Text="Submit" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"
+                            CssClass="btn bg-blue-500 hover:bg-blue-700 text-white mt-5 rounded-lg px-4 py-2"/>
                     </div>
                 </div>
   
-                <div class="flex justify-between text-white mb-4">
+                <div class="flex justify-between text-white">
                     <p class="mb-0">Subtotal</p>
                     <asp:Label ID="lblSubtotal" runat="server" CssClass="mb-2"></asp:Label>
                     <%--<p class="mb-0">RM 213.99</p>--%>
                 </div>
                 
-                <div class="flex justify-between text-white mb-4">
+                <div class="flex justify-between text-white">
                     <p class="mb-0">Sale Discount</p>
                     <%--<p class="mb-0">-RM 0.00</p>--%>
                     <asp:Label ID="lblDiscount" runat="server" CssClass="mb-2" Text="-RM 0.00"></asp:Label>
@@ -116,7 +116,7 @@
                 <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <span>or&nbsp&nbsp</span>         
                     <asp:LinkButton ID="LinkButton2" runat="server" class="font-medium text-indigo-600 hover:text-indigo-500" 
-                        PostBackUrl="~/client/Product.aspx" >Continue Shopping</asp:LinkButton>
+                        PostBackUrl="~/client/Product.aspx">Continue Shopping</asp:LinkButton>
                 </div>
             </div>
         </div>

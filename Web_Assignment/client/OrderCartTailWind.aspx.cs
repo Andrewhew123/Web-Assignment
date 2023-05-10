@@ -42,14 +42,21 @@ namespace Web_Assignment.client
             RepeaterItem item = (sender as LinkButton).Parent as RepeaterItem;
             Label ids = ((Label)item.FindControl("lblName")) as Label;
 
-            string delete = "DELETE FROM Product WHERE name = @name";
-
-            SqlCommand cmd = new SqlCommand(delete, con);
-            cmd.Parameters.AddWithValue("@name", ids.Text);
+            string getId = "SELECT productId FROM Product WHERE name = @name";
+            SqlCommand idcmd = new SqlCommand(getId, con);
+            idcmd.Parameters.AddWithValue("@name", ids.Text);
             con.Open();
-            cmd.ExecuteNonQuery();
+            object result = idcmd.ExecuteScalar();
+            if (result != null)
+            {
+                string id = result.ToString();
+                string delete = "DELETE FROM Cart WHERE productId = @id";
+                SqlCommand cmd = new SqlCommand(delete, con);
+                int productId = int.Parse(id);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
             con.Close();
-
             displayProductInCart();
             displayTotal();
         }

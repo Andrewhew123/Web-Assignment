@@ -60,15 +60,28 @@ namespace Web_Assignment.client
                 //SQL Statement
 
                 string strAddCart = "insert into Cart (productId, userId) values('" + productID + "', '7df4f68c-1f12-456e-b745-e3afc70184a9')";
+                string getCartData = "SELECT * FROM Cart WHERE productId = @productId";
 
                 //Need sqlcommand to execute sql query
                 SqlCommand cmd = new SqlCommand(strAddCart, con);
 
-                cmd.ExecuteNonQuery();
-
+                SqlCommand command = new SqlCommand(getCartData, con);
+                command.Parameters.AddWithValue("@productId", productID);
+                SqlDataReader reader = command.ExecuteReader();
+                
+                //Validation
+                if (reader.HasRows)
+                {
+                    Response.Write("<script>alert('Your product has added into cart!') </script>");
+                }
+                else
+                {
+                    reader.Close();
+                    cmd.ExecuteNonQuery();
+                    Response.Write("<script>alert('Successfully Add Product into Cart!') </script>");
+                }
                 con.Close();
 
-                Response.Write("<script>alert('Successfully Add Product into Cart!') </script>");
             }
         }
     }
