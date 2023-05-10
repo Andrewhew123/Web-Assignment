@@ -36,7 +36,9 @@
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Galaxy</span>
 
             </a>
-            <p class="text-base font-medium text-gray-900 dark:text-white m-2">Admin</p>
+            <p class="text-base font-medium text-gray-900 dark:text-white m-2">Admin : 
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </p>
             <hr class="h-px m-2 bg-gray-200 border-0 dark:bg-gray-700">
             <ul class="space-y-2 font-medium">
 
@@ -44,52 +46,67 @@
                 <li>
                     <a href="Dashboard.aspx" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                         <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        </svg>
                         <span class="ml-3">Dashboard</span>
                     </a>
                 </li>
 
-                 <!----- Menu option: Add item ----->
+                <!----- Menu option: Genre ----->
+                <li>
+                    <a href="ManageGenre.aspx" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fa fa-bars-progress m-1 text-gray-500"></i>
+                        <span class="ml-3">Genre</span>
+                    </a>
+                </li>
+
+                <!----- Menu option: System ----->
+                <li>
+                    <a href="ManageSystem.aspx" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                         <i class="fa fa-bars-progress m-1 text-gray-500"></i>
+                        <span class="ml-3">System</span>
+                    </a>
+                </li>
+
+
+                 <!----- Menu option: Product ----->
                 <li>
                     <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example-add-item">
                         
                         <i class="fa fa-bars-progress m-1 text-gray-500"></i>
-                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Add Items</span>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Product</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
                     </button>
+
                     <ul id="dropdown-example-add-item" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="AddProduct.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Game</a>
+                            <a href="AddProduct.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Add Product</a>
                         </li>
                         <li>
-                            <a href="AddGenre.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Genre</a>
-                        </li>
-                        <li>
-                            <a href="AddSystem.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">System</a>
+                            <a href="ManageProduct.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Manage Product</a>
                         </li>
                     </ul>
 
                 </li>
 
-                <!----- Menu option: Customise Item ----->
+
+                <!----- Menu option: Role ----->
                 <li>
-                    <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example-manage-item">
+                    <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example-role">
                         
                         <i class="fa-solid fa-plus m-1 text-gray-500"></i>
-                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Customise Items</span>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Role</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
-                    <ul id="dropdown-example-manage-item" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-role" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="ManageProduct.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Game</a>
+                            <a href="AddRole.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Add Role</a>
                         </li>
                         <li>
-                            <a href="ManageGenre.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Genre</a>
-                        </li>
-                        <li>
-                            <a href="ManageSystem.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">System</a>
+                            <a href="ManageRole.aspx" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Manage Role</a>
                         </li>
                     </ul>
                 </li>
@@ -131,6 +148,14 @@
                     <asp:ContentPlaceHolder ID="UpdateGenre" runat="server">
                     </asp:ContentPlaceHolder>
                     <asp:ContentPlaceHolder ID="UpdateSystem" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <!----- Manage & Add Role ----->
+                    <asp:ContentPlaceHolder ID="ManageRole" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="AddRole" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="UpdateRole" runat="server">
                     </asp:ContentPlaceHolder>
 
                 </div>

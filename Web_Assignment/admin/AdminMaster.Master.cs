@@ -11,7 +11,14 @@ namespace Web_Assignment.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserName"] != null)
+            {
+                Label1.Text = Session["UserName"].ToString();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

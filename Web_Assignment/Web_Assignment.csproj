@@ -42,10 +42,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
+    </Reference>
+    <Reference Include="Stripe.net, Version=41.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.41.15.0\lib\net461\Stripe.net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,36 +87,64 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin\AddGenre.aspx" />
-    <Content Include="admin\AddProduct.aspx" />
-    <Content Include="admin\AddSystem.aspx" />
-    <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ManageGenre.aspx" />
-    <Content Include="admin\ManageProduct.aspx" />
+    <Content Include="admin\AddProduct.aspx" />
+    <Content Include="admin\AddRole.aspx" />
     <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\Dashboard.aspx" />
+    <Content Include="admin\ManageProduct.aspx" />
+    <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\UpdateGenre.aspx" />
+    <Content Include="admin\ManageRole.aspx" />
+    <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\UpdateProduct.aspx" />
-    <Content Include="admin\UpdateSystem.aspx" />
+    <Content Include="admin\UpdateRole.aspx" />
     <Content Include="App_Data\Galaxy.mdf" />
-    <Content Include="App_Data\Galaxy_log.ldf">
-      <DependentUpon>Galaxy.mdf</DependentUpon>
-    </Content>
+    <Content Include="App_Data\Galaxy_log.ldf" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.Buffers.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Memory.dll" />
+    <Content Include="bin\roslyn\System.Numerics.Vectors.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\Web_Assignment.dll" />
+    <Content Include="bin\Web_Assignment.pdb" />
     <Content Include="client\AboutUs.aspx" />
+    <Content Include="client\ForgetPassword.aspx" />
+    <Content Include="client\OrderCartTailWind.aspx" />
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\Login.aspx" />
     <Content Include="client\OrderCart.aspx" />
     <Content Include="client\Payment.aspx" />
+    <Content Include="client\PaymentGateway.aspx" />
+    <Content Include="client\PaymentSuccess.aspx" />
+    <Content Include="client\PaymentTailwind.aspx" />
     <Content Include="client\Product.aspx" />
     <Content Include="client\Register.aspx" />
     <Content Include="client\UserProfile.aspx" />
     <Content Include="css\aboutus.css" />
     <Content Include="css\cart.css" />
+    <Content Include="css\forgetpassword.css" />
     <Content Include="css\header.css" />
-    <Content Include="css\login.css" />
     <Content Include="css\payment.css" />
-    <Content Include="css\register.css" />
+    <Content Include="css\account.css" />
     <Content Include="css\userprofile.css" />
     <Content Include="img\aboutus\andrew.png" />
     <Content Include="img\aboutus\tzenyang.png" />
@@ -131,12 +182,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\AddGenre.aspx.cs">
-      <DependentUpon>AddGenre.aspx</DependentUpon>
+    <Compile Include="admin\ManageGenre.aspx.cs">
+      <DependentUpon>ManageGenre.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\AddGenre.aspx.designer.cs">
-      <DependentUpon>AddGenre.aspx</DependentUpon>
+    <Compile Include="admin\ManageGenre.aspx.designer.cs">
+      <DependentUpon>ManageGenre.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
@@ -145,19 +196,26 @@
     <Compile Include="admin\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\AddSystem.aspx.cs">
-      <DependentUpon>AddSystem.aspx</DependentUpon>
+    <Compile Include="admin\AddRole.aspx.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\AddSystem.aspx.designer.cs">
-      <DependentUpon>AddSystem.aspx</DependentUpon>
+    <Compile Include="admin\AddRole.aspx.designer.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\UpdateGenre.aspx.cs">
-      <DependentUpon>UpdateGenre.aspx</DependentUpon>
+    <Compile Include="admin\ManageSystem.aspx.cs">
+      <DependentUpon>ManageSystem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\UpdateGenre.aspx.designer.cs">
-      <DependentUpon>UpdateGenre.aspx</DependentUpon>
+    <Compile Include="admin\ManageSystem.aspx.designer.cs">
+      <DependentUpon>ManageSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ManageRole.aspx.cs">
+      <DependentUpon>ManageRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ManageRole.aspx.designer.cs">
+      <DependentUpon>ManageRole.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\UpdateProduct.aspx.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
@@ -166,12 +224,12 @@
     <Compile Include="admin\UpdateProduct.aspx.designer.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\UpdateSystem.aspx.cs">
-      <DependentUpon>UpdateSystem.aspx</DependentUpon>
+    <Compile Include="admin\UpdateRole.aspx.cs">
+      <DependentUpon>UpdateRole.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\UpdateSystem.aspx.designer.cs">
-      <DependentUpon>UpdateSystem.aspx</DependentUpon>
+    <Compile Include="admin\UpdateRole.aspx.designer.cs">
+      <DependentUpon>UpdateRole.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
@@ -194,13 +252,6 @@
     <Compile Include="admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\ManageGenre.aspx.cs">
-      <DependentUpon>ManageGenre.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\ManageGenre.aspx.designer.cs">
-      <DependentUpon>ManageGenre.aspx</DependentUpon>
-    </Compile>
     <Compile Include="admin\ManageProduct.aspx.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,12 +259,19 @@
     <Compile Include="admin\ManageProduct.aspx.designer.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\ManageSystem.aspx.cs">
-      <DependentUpon>ManageSystem.aspx</DependentUpon>
+    <Compile Include="client\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\ManageSystem.aspx.designer.cs">
-      <DependentUpon>ManageSystem.aspx</DependentUpon>
+    <Compile Include="client\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\OrderCartTailWind.aspx.cs">
+      <DependentUpon>OrderCartTailWind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\OrderCartTailWind.aspx.designer.cs">
+      <DependentUpon>OrderCartTailWind.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\ClientMaster.Master.cs">
       <DependentUpon>ClientMaster.Master</DependentUpon>
@@ -257,6 +315,27 @@
     <Compile Include="client\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="client\PaymentGateway.aspx.cs">
+      <DependentUpon>PaymentGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\PaymentGateway.aspx.designer.cs">
+      <DependentUpon>PaymentGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\PaymentSuccess.aspx.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\PaymentSuccess.aspx.designer.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\PaymentTailwind.aspx.cs">
+      <DependentUpon>PaymentTailwind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\PaymentTailwind.aspx.designer.cs">
+      <DependentUpon>PaymentTailwind.aspx</DependentUpon>
+    </Compile>
     <Compile Include="client\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +368,17 @@
     <Content Include="obj\Debug\Web_Assignment.csproj.CopyComplete" />
     <Content Include="obj\Debug\Web_Assignment.csproj.CoreCompileInputs.cache" />
     <Content Include="admin\AdminMaster.Master" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\Web_Assignment.dll.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -298,6 +388,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="img\product\productCover\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>

@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="d-flex flex-row w-100 mt-5 align-bottom">
-                                <img alt="windows OS" class="img-fluid" src="../img/product/windows10.png" style="width:22px; height:24px"/>
+                                <img alt="windows OS" class="img-fluid" src="../img/product/windows10.png" style="width:20px; height:24px"/>
                                 <img alt="mac OS" class="img-fluid ms-2" src="../img/product/macOS.png" style="width:24px; height:24px"/>
                                 <div class="ms-auto">
                                     <a href="#" style="color:#F5F5F5; opacity:0.6; text-decoration:none">

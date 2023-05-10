@@ -29,37 +29,15 @@
     <div class="border">
         <p class="label">
             Username<br />
-            <asp:TextBox ID="name" runat="server" class="text"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button1" runat="server" Text="Edit" class="editbtn"/>
+            <asp:Label ID="Label1" runat="server" class="text"></asp:Label>
         </p>
         <p class="label">
             Email<br />
-            <asp:TextBox ID="TextBox2" runat="server" class="text"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" Text="Edit" class="editbtn"/>
-        </p>
-        <p class="label">
-            Gender<br />
-            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="False" class="profiledropdown">
-                <asp:ListItem>Default</asp:ListItem>
-                <asp:ListItem>Male</asp:ListItem>
-                <asp:ListItem>Female</asp:ListItem>
-                <asp:ListItem>Others</asp:ListItem>
-            </asp:DropDownList>
+            <asp:Label ID="Label2" runat="server" class="text"></asp:Label>
         </p>
         <p class="label">
             Region<br />
-            <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="False" class="profiledropdown">
-                <asp:ListItem>Default</asp:ListItem>
-                <asp:ListItem>China</asp:ListItem>
-                <asp:ListItem>India</asp:ListItem>
-                <asp:ListItem>Japan</asp:ListItem>
-                <asp:ListItem>Korea</asp:ListItem>
-                <asp:ListItem>Malaysia</asp:ListItem>
-                <asp:ListItem>Singapore</asp:ListItem>
-                <asp:ListItem>Thailand</asp:ListItem>
-            </asp:DropDownList>
+            <asp:Label ID="Label3" runat="server" class="text"></asp:Label>
         </p>
     </div>
 
@@ -74,16 +52,19 @@
     <div class="border">
         <p class="label">
             Current Password :&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="currentpass" runat="server" class="passwordtext"></asp:TextBox>
-        </p>
+            <asp:TextBox ID="currentpass" runat="server" class="passwordtext" TextMode="Password"></asp:TextBox>
+        &nbsp;</p>
         <p class="label">
-            New Password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <asp:TextBox ID="newpass" runat="server" class="passwordtext"></asp:TextBox>
+            New Password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <asp:TextBox ID="newpass" runat="server" class="passwordtext" TextMode="Password"></asp:TextBox>
+        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" class="errormessage2" runat="server" ControlToValidate="newpass" ErrorMessage="New password is required."></asp:RequiredFieldValidator>
         </p>
         <p class="label">
             Confirm Password :&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="confirmpass" runat="server" class="passwordtext"></asp:TextBox>
+            <asp:TextBox ID="confirmpass" runat="server" class="passwordtext" TextMode="Password" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:TextBox>
+        &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" class="errormessage2" runat="server" ControlToValidate="newpass" ErrorMessage="Password contain minimum 8 characters, incldue 1 letter and 1 number." ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"></asp:RegularExpressionValidator>
         </p>
-        <asp:Button ID="changepassword" runat="server" Text="Save Changes" class="btnsubmit" Style="background-color: #9F76AE; color: white;" />
+        <p><asp:Label class="errormessage" ID="errormessage" runat="server"></asp:Label></p>
+        <asp:Button ID="changepassword" runat="server" Text="Save Changes" class="btnsubmit" Style="background-color: #9F76AE; color: white;" OnClick="changepassword_Click" />
     </div>
 
     <div class="maintitle">
@@ -98,7 +79,7 @@
                         information, games purchases, game progress, account history and other related information. 
                         Once your Galaxy Games account is deleted, your won't able to request any refund or return.</td>
                 <td>
-                    <asp:Button ID="delete" runat="server" Text="DELETE ACCOUNT" class="delbtn" />
+                    <asp:Button ID="delete" runat="server" Text="DELETE ACCOUNT" class="delbtn" OnClick="delete_Click" />
                 </td>
             </tr>
         </table>
