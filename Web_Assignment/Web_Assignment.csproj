@@ -93,6 +93,8 @@
     <Content Include="admin\ManageSystem.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ManageProduct.aspx" />
+    <Content Include="admin\ManageSystem.aspx" />
+    <Content Include="admin\UpdateGenre.aspx" />
     <Content Include="admin\ManageRole.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\UpdateProduct.aspx" />
@@ -139,9 +141,8 @@
     <Content Include="css\aboutus.css" />
     <Content Include="css\cart.css" />
     <Content Include="css\header.css" />
-    <Content Include="css\login.css" />
     <Content Include="css\payment.css" />
-    <Content Include="css\register.css" />
+    <Content Include="css\account.css" />
     <Content Include="css\userprofile.css" />
     <Content Include="img\aboutus\andrew.png" />
     <Content Include="img\aboutus\tzenyang.png" />
