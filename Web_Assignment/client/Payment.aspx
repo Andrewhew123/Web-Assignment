@@ -147,7 +147,7 @@
 
                         <br />
                         <div style="text-align: center;">
-                            <asp:Button ID="btnPayNow" runat="server" Text="Pay Now" CssClass="btn btn-success btn-lg btn-block" OnClick="btnPayNow_Click" />
+                            <asp:Button ID="btnPayNow" runat="server" Text="Pay Now" CssClass="btn btn-success btn-lg btn-block" href="~/client/PaymentGateway.aspx" />
                         </div>
                             
 

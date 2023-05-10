@@ -89,8 +89,8 @@ namespace Web_Assignment.client
 
         protected void LinkButtonViewReceipt_Click(object sender, EventArgs e)
         {
-            receiptModal.Style.Add("display", "block");
-            paymentMessage.Style.Add("display", "none");
+            //receiptModal.Style.Add("display", "block");
+            //paymentMessage.Style.Add("display", "none");
         }
 
         protected void btnConfirmInvoice_Click(object sender, EventArgs e)
