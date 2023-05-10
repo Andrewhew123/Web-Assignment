@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,39 +6,164 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Web_Assignment.client
 {
     public partial class PaymentSuccess : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Galaxy.mdf;Integrated Security=True;");
-        string order = "";
-        string orderId;
-        string s;
-        string t;
-        string[] a = new string[6];
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Galaxy.mdf;Integrated Security=True;";
+        string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            order = Request.QueryString["Order"].ToString();
-
-            if (order == Session["order_number"].ToString())
+            if (!IsPostBack)
             {
+                InsertData();
+            }
+            //string email = Session["user"].ToString();
+            // Get user data from the database
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                //DataTable userData = GetUserData(con, email);
+                //if (userData.Rows.Count > 0)
+                //{
+                    //DataRow userRow = userData.Rows[0];
+                    // Insert the order into the database
+                    //InsertOrder(con, userRow);
+                    // Get the order ID from the database
+                    //string orderId = GetOrderId(con, userRow["id"].ToString());
+                    // Insert the order details into the database
+                    //if (!string.IsNullOrEmpty(orderId))
+                   // {
+                     //   InsertOrderDetails(con, orderId);
+                   // }
+                //}
+            }
+        }
+
+
+        private DataTable GetUserData(SqlConnection con, string email)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM [User] WHERE email = @email";
+            cmd.Parameters.AddWithValue("@email", email);
+            DataTable userData = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(userData);
+            con.Close();
+            return userData;
+        }
+
+
+        /*private void InsertOrder(SqlConnection con, DataRow userRow)
+        {
+            Guid newGuid = Guid.NewGuid();
+            con.Open();
+            string insertQuery = "INSERT INTO [Order] (orderDate, userID, orderId, amount) VALUES (@orderDate, @userId, @orderId, @amount)";
+            using (SqlCommand com = new SqlCommand(insertQuery, con))
+            {
+                com.Parameters.Add(new SqlParameter("@orderDate", SqlDbType.DateTime)).Value = DateTime.Now;
+                com.Parameters.Add(new SqlParameter("@userId", SqlDbType.NVarChar)).Value = newGuid;
+                com.Parameters.Add(new SqlParameter("@orderId", SqlDbType.Int)).Value = newGuid;
+                com.Parameters.Add(new SqlParameter("@amount", SqlDbType.Decimal)).Value = GetOrderTotal();
+                com.ExecuteNonQuery();
+            }
+            con.Close();
+        }*/
+
+        private void InsertData()
+        {
+
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                con.Open();
+                Guid newGuid = Guid.NewGuid();
+                //SQL Statement
+                string strAddOrder = "insert into [dbo].[Order] (orderDate, userID, amount) values (@orderDate, @userId, @amount)";
+
+                //Need sqlcommand to execute sql query
+                SqlCommand cmd = new SqlCommand(strAddOrder, con);
+                cmd.Parameters.AddWithValue("@orderDate", DateTime.Now);
+                cmd.Parameters.AddWithValue("@userId", "bbbc21d4-1f38-4329-bc2c-52f0744da1f1");
+                cmd.Parameters.AddWithValue("@amount", 10.00);
+                int rowAffected = cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Success')</script>");
+
+            }
+
+        }
+
+        private decimal GetOrderTotal()
+        {
+            if (Request.Cookies["aa"] != null)
+            {
+                string cookieValue = Request.Cookies["aa"].Value;
+                string[] orders = cookieValue.Split('|');
+                decimal total = 0;
+                foreach (string order in orders)
+                {
+                    string[] orderDetails = order.Split(',');
+                    if (orderDetails.Length < 5)
+                    {
+                        continue;
+                    }
+                    decimal price = decimal.Parse(orderDetails[2]);
+                    int quantity = int.Parse(orderDetails[3]);
+                    total += price * quantity;
+                    total = 106;
+                }
+                return total;
+            }
+            return 0;
+        }
+
+
+        private string GetOrderId(SqlConnection con, string userId)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT TOP 1 * FROM [Order] WHERE userID = @userId ORDER BY id DESC";
+            cmd.Parameters.AddWithValue("@userId", userId);
+            DataTable orderIdData = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(orderIdData);
+            if (orderIdData.Rows.Count == 0)
+            {
+                return null;
+            }
+            con.Close();
+            return orderIdData.Rows[0]["id"].ToString();
+        }
+
+        private void InsertOrderDetails(SqlConnection con, string orderId)
+        {
+            if (Request.Cookies["aa"] == null)
+            {
+                return;
+            }
+
+            string cookieValue = Request.Cookies["aa"].Value;
+            string[] orders = cookieValue.Split('|');
+            foreach (string order in orders)
+            {
+                string[] orderDetails = order.Split(',');
+                if (orderDetails.Length < 5)
+                {
+                    continue;
+                }
+                con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from [User] where email ='" + Session["user"].ToString() + "'";
+                cmd.CommandText = "INSERT INTO [OrderItem] VALUES (@orderId, @productId)";
+                cmd.Parameters.AddWithValue("@orderId", orderId);
+                cmd.Parameters.AddWithValue("@productId", orderDetails[0]);
                 cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    SqlCommand cmd1 = con.CreateCommand();
-                    cmd1.CommandType = CommandType.Text;
-                    cmd1.CommandText = "insert into [Order] values ('" + dr["@orderDate"].ToString() + "','" + dr["@userId"].ToString() + "','" + dr["@paymentId"].ToString() + "')";
-                    cmd1.ExecuteNonQuery();
+                con.Close();
 
-
-                }
                 SqlCommand cmd2 = con.CreateCommand();
                 cmd2.CommandType = CommandType.Text;
                 cmd2.CommandText = "select top 1 * from [Order] where email='" + Session["user"].ToString() + "' order by id desc ";
@@ -50,43 +175,13 @@ namespace Web_Assignment.client
                 {
                     orderId = dr2["id"].ToString();
                 }
-
-                if (Request.Cookies["aa"] != null)
-                {
-                    s = Convert.ToString(Request.Cookies["aa"].Value);
-                    string[] strArr = s.Split('|');
-                    for (int i = 0; i < strArr.Length; i++)
-                    {
-                        t = Convert.ToString(strArr[i].ToString());
-                        string[] strArr1 = t.Split(',');
-                        for (int j = 0; j < strArr1.Length; j++)
-                        {
-                            a[j] = strArr1[j].ToString();
-                        }
-
-                        SqlCommand cmd3 = con.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "insert into [OrderItem] values('" + orderId.ToString() + "','" + a[0].ToString() + "','" + a[2].ToString() + "','" + a[3].ToString() + "','" + a[4].ToString() + "')";
-                        cmd3.ExecuteNonQuery();
-
-                    }
-                }
             }
-            else
-            {
-                Response.Redirect("Login.aspx");
-
-            }
-
-            con.Close();
-
-            Session["user"] = "";
-            Response.Cookies["aa"].Expires = DateTime.Now.AddDays(-1);
-            Response.Cookies["aa"].Expires = DateTime.Now.AddDays(-1);
-
-
         }
 
 
     }
 }
+
+
+
+

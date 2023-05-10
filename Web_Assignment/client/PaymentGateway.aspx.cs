@@ -18,9 +18,10 @@ namespace Web_Assignment.client
            // dt = (DataTable)Session["buyitems"];
             //int nrow = dt.Rows.Count;
             int i = 0;
-            int orderId;
+            int orderId = 0001;
             decimal totalprice = 100;
             decimal finaltotal = 100;
+            string orderNumber;
 
             //while (i < nrow)
             //{
