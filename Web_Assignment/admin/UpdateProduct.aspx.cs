@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -23,6 +24,7 @@ namespace Web_Assignment.admin
                 retrieveData();
                 BindReaderData_Genre();
                 BindReaderData_System();
+
             }
         }
 
@@ -41,9 +43,21 @@ namespace Web_Assignment.admin
 
                 while (dr.Read())
                 {
-                    txtProductName.Text = dr.GetValue(1).ToString();
-                    txtDesc.InnerText= dr.GetValue(2).ToString(); 
-                    txtPrice.Text = dr.GetValue(3).ToString();
+
+                    if (string.IsNullOrEmpty(dr.GetValue(1).ToString()))
+                    {
+                        labelImageExisting.Text = "Currently no product image";
+                    }
+                    else
+                    {
+                        labelImageExisting.Text = "Product image: " + dr.GetValue(1).ToString();
+
+                    }
+
+                    txtProductName.Text = dr.GetValue(2).ToString();
+                    txtDesc.InnerText= dr.GetValue(3).ToString();
+                    txtPrice.Text = dr.GetValue(4).ToString();
+                    
                 }
                
             }
@@ -148,27 +162,59 @@ namespace Web_Assignment.admin
             double priceInput = double.Parse(txtPrice.Text);
             int genreInput = int.Parse(ddlGenre.SelectedValue);
             int systemInput = int.Parse(ddlSystem.SelectedValue);
+            String imageInput = null;
 
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                con.Open();
-
-                //SQL Statement
-                string strUpdateProduct = "update Product SET name='" + nameInput + "', description='" + descInput + "', price='" + priceInput + "', genreId='" + genreInput + "', systemId='" + systemInput + "' where productId='" + Request.QueryString["id"] + "'";
-
-                //Need sqlcommand to execute sql query
-                SqlCommand cmd = new SqlCommand(strUpdateProduct, con);
-
-                int rowAffected = cmd.ExecuteNonQuery();
-                con.Close();
-
-                if (rowAffected > 0 )
+                if (FileUploadProductImage.HasFile)
                 {
-                    Response.Write("<script>alert('Successfully update product')</script>");
+                    string strname = FileUploadProductImage.FileName.ToString();
+                    FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/img/product/productCover/") + strname);
+                    imageInput = strname;
+                    labelImageExisting.Text = null;
+
+                    con.Open();
+
+                    //SQL Statement (Update Image)
+                    string strUpdateProduct = "update Product SET image='" + imageInput + "', name='" + nameInput + "', description='" + descInput + "', price='" + priceInput + "', genreId='" + genreInput + "', systemId='" + systemInput + "' where productId='" + Request.QueryString["id"] + "'";
+
+                    //Need sqlcommand to execute sql query
+                    SqlCommand cmd = new SqlCommand(strUpdateProduct, con);
+
+                    int rowAffected = cmd.ExecuteNonQuery();
+
+                    if (rowAffected > 0)
+                    {
+                        Response.Write("<script>alert('Successfully update product')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Failed to update product')</script>");
+                    }
+                    con.Close();
+
                 }
                 else
                 {
-                    Response.Write("<script>alert('Failed to update product')</script>");
+                    con.Open();
+
+                    //SQL Statement (No Update Image)
+                    string strUpdateProduct = "update Product SET name='" + nameInput + "', description='" + descInput + "', price='" + priceInput + "', genreId='" + genreInput + "', systemId='" + systemInput + "' where productId='" + Request.QueryString["id"] + "'";
+
+                    //Need sqlcommand to execute sql query
+                    SqlCommand cmd = new SqlCommand(strUpdateProduct, con);
+
+                    int rowAffected = cmd.ExecuteNonQuery();
+                    
+                    if (rowAffected > 0)
+                    {
+                        Response.Write("<script>alert('Successfully update product')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Failed to update product')</script>");
+                    }
+                    con.Close();
                 }
                 
                 Server.Transfer("ManageProduct.aspx");

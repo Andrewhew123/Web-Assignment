@@ -32,6 +32,13 @@ namespace Web_Assignment.admin
                 {
                     GridViewSystem.DataSource = dr;
                     GridViewSystem.DataBind();
+                    LabelNoData.Style.Add("display", "none");
+                }
+                else
+                {
+                    GridViewSystem.DataSource = dr;
+                    GridViewSystem.DataBind();
+                    LabelNoData.Style.Add("display", "block");
                 }
             }
         }

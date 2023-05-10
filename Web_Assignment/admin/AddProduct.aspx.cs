@@ -20,56 +20,11 @@ namespace Web_Assignment.admin
             {
                 BindReaderData_Genre();
                 BindReaderData_System();
+
             }
 
-        }
-
-        /*
-        protected void cascadingGenreDropDown()
-        {
-            SqlConnection con;
-            con = new SqlConnection(strCon);
-            con.Open();
-
-            //SQL Statement
-            string strSelect = "Select genreName from [dbo].[Genre]";
-
-            //Need sqlcommand to execute sql query
-            SqlCommand cmdSelect = new SqlCommand(strSelect, con);
-
-            cmdSelect.CommandType = System.Data.CommandType.Text;
-            ddlGenre.DataSource = cmdSelect.ExecuteReader();
-            ddlGenre.DataTextField = "genreName";
-            ddlGenre.DataValueField = "genreId";
-            ddlGenre.DataBind();
-            ddlGenre.Items.Insert(0, new ListItem("-- Select Genre --", "0"));
 
         }
-        */
-
-        /*
-        private void BindGenreData()
-        {
-            SqlConnection con;
-            con = new SqlConnection(strCon);
-
-            //SQL Statement
-            string strSelect = "Select genreName from [dbo].[Genre]";
-
-            SqlDataAdapter da = new SqlDataAdapter(strSelect, con);
-
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-
-            ds.Tables[0].Columns.Add("genre", typeof(string), "genreName");
-            ddlGenre.DataValueField = "genreId";
-            ddlGenre.DataTextField = "genre";
-            ddlGenre.DataSource = ds;
-            ddlGenre.DataBind();
-
-
-        }
-        */
 
         private void BindReaderData_Genre()
         {
@@ -119,19 +74,21 @@ namespace Web_Assignment.admin
 
         protected void btnAddProduct_Click(object sender, EventArgs e)
         {
+            
             //System Input
             String nameInput = txtProductName.Text;
             String descInput = txtDesc.InnerText;
             double priceInput = double.Parse(txtPrice.Text);
             int genreInput = int.Parse(ddlGenre.SelectedValue);
             int systemInput = int.Parse(ddlSystem.SelectedValue);
-            String ImagefileName = null;
+            String imageInput = null;
 
             if (FileUploadProductImage.HasFile)
             {
+
                 string strname = FileUploadProductImage.FileName.ToString();
-                FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/product/productCover/") + strname);
-                ImagefileName = strname;
+                FileUploadProductImage.PostedFile.SaveAs(Server.MapPath("~/img/product/productCover/") + strname);
+                imageInput = strname;
 
 
                 SqlConnection con;
@@ -140,7 +97,7 @@ namespace Web_Assignment.admin
                 con.Open();
 
                 //SQL Statement
-                string strAddProduct = "insert into Product (name, description, price, genreId, systemId) values('" + nameInput + "', '" + descInput + "', '" + priceInput + "', '" + genreInput + "', '" + systemInput + "')";
+                string strAddProduct = "insert into Product (image, name, description, price, genreId, systemId) values('" + imageInput + "', '" + nameInput + "', '" + descInput + "', '" + priceInput + "', '" + genreInput + "', '" + systemInput + "')";
 
                 //Need sqlcommand to execute sql query
                 SqlCommand cmd = new SqlCommand(strAddProduct, con);
@@ -156,15 +113,16 @@ namespace Web_Assignment.admin
                 {
                     Response.Write("<script>alert('Failed to add product')</script>");
                 }
-
+                Server.Transfer("ManageProduct.aspx");
 
             }
             else
             {
-                ImagefileName = null;
+                imageInput = null;
             }
 
             
+
 
         }
     }
