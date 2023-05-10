@@ -25,8 +25,9 @@ namespace Web_Assignment.client
         protected void displayProductInCart()
         {
             SqlConnection con = new SqlConnection(strCon);
-            //INNER JOIN CartItem ON CartItem.productId = Product.productId
-            string strSelect = "SELECT * FROM Product ";
+            //select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '" + Request.QueryString["id"] + "')
+            //select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '7df4f68c-1f12-456e-b745-e3afc70184a9')
+            string strSelect = "select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '7df4f68c-1f12-456e-b745-e3afc70184a9')";
             SqlDataAdapter sda = new SqlDataAdapter(strSelect, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -56,8 +57,8 @@ namespace Web_Assignment.client
         protected decimal displayTotal()
         {
             SqlConnection con = new SqlConnection(strCon);
-            //INNER JOIN CartItem ON CartItem.productId = Product.productId
-            string strSelect = "SELECT * FROM Product ";
+            //select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '7df4f68c-1f12-456e-b745-e3afc70184a9')
+            string strSelect = "select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '7df4f68c-1f12-456e-b745-e3afc70184a9')";
             SqlDataAdapter sda = new SqlDataAdapter(strSelect, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -91,7 +92,7 @@ namespace Web_Assignment.client
                 // apply 30% discount
                 discount = beforeDiscount * 0.3m;
                 afterDiscount = beforeDiscount - discount;
-                Response.Write("<script>alert('Promo code applied successfully') </script>");
+                Response.Write("<script>alert('Promo code applied successfully!') </script>");
 
                 txtPromo.Text = promocode;
                 lblDiscount.Text = "-RM " + Math.Round(discount, 2);

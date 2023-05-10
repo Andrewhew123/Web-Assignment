@@ -49,5 +49,27 @@ namespace Web_Assignment.client
 
             }
         }
+
+        protected void btnAddCart_Click(object sender, EventArgs e)
+        {
+            String productID = Request.QueryString["id"];
+            
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                con.Open();
+                //SQL Statement
+
+                string strAddCart = "insert into Cart (productId, userId) values('" + productID + "', '7df4f68c-1f12-456e-b745-e3afc70184a9')";
+
+                //Need sqlcommand to execute sql query
+                SqlCommand cmd = new SqlCommand(strAddCart, con);
+
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                Response.Write("<script>alert('Successfully Add Product into Cart!') </script>");
+            }
+        }
     }
 }

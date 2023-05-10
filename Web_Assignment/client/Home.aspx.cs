@@ -25,12 +25,8 @@ namespace Web_Assignment.client
                 adapter.Fill(dt);
                 RepeaterDisplayProduct.DataSource = dt;
                 RepeaterDisplayProduct.DataBind();
-                
-                
-                
             }
-            
-            
+
         }
 
         protected void RepeaterDisplayProduct_ItemCommand(object source, RepeaterCommandEventArgs e)
