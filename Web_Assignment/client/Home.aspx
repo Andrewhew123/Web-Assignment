@@ -75,7 +75,7 @@
                                 <span class="font-bold text-lg">8 Items</span>
                                 <span class="text-info">Subtotal: $999</span>
                                 <div class="card-actions">
-                                    <a href="OrderCart.aspx" class="btn btn-primary btn-block">View cart</a>
+                                    <a href="OrderCartTailWind.aspx" class="btn btn-primary btn-block">View cart</a>
                                 </div>
                             </div>
                         </div>
