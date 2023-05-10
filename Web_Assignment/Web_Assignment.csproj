@@ -103,11 +103,13 @@
     <Content Include="bin\Web_Assignment.dll" />
     <Content Include="bin\Web_Assignment.pdb" />
     <Content Include="client\AboutUs.aspx" />
+    <Content Include="client\OrderCartTailWind.aspx" />
     <Content Include="client\GameLibrary.aspx" />
     <Content Include="client\Home.aspx" />
     <Content Include="client\Login.aspx" />
     <Content Include="client\OrderCart.aspx" />
     <Content Include="client\Payment.aspx" />
+    <Content Include="client\PaymentTailwind.aspx" />
     <Content Include="client\Product.aspx" />
     <Content Include="client\Register.aspx" />
     <Content Include="client\UserProfile.aspx" />
@@ -231,6 +233,13 @@
     <Compile Include="admin\ManageProduct.aspx.designer.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="client\OrderCartTailWind.aspx.cs">
+      <DependentUpon>OrderCartTailWind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\OrderCartTailWind.aspx.designer.cs">
+      <DependentUpon>OrderCartTailWind.aspx</DependentUpon>
+    </Compile>
     <Compile Include="client\ClientMaster.Master.cs">
       <DependentUpon>ClientMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,6 +281,13 @@
     </Compile>
     <Compile Include="client\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client\PaymentTailwind.aspx.cs">
+      <DependentUpon>PaymentTailwind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client\PaymentTailwind.aspx.designer.cs">
+      <DependentUpon>PaymentTailwind.aspx</DependentUpon>
     </Compile>
     <Compile Include="client\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>

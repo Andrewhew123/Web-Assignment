@@ -11,61 +11,43 @@ namespace Web_Assignment.client
 {
 
 
-    public partial class Product
+    public partial class cart
     {
 
         /// <summary>
-        /// txtProductName1 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtProductName1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtProductName2 control.
+        /// txtPromo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtProductName2;
+        protected global::System.Web.UI.WebControls.TextBox txtPromo;
 
         /// <summary>
-        /// txtProductPrice control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtProductPrice;
+        protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// txtProductDescription control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtProductDescription;
-
-        /// <summary>
-        /// txtProductGenre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtProductGenre;
-
-        /// <summary>
-        /// txtSystem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtSystem;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
