@@ -58,16 +58,10 @@
                                 <a class="nav-link active text-white" aria-current="page" href="Home.aspx">Home</a>
                             </li>
                             <li class="nav-item me-4">
-                                <a class="nav-link text-white" href="Home.aspx">Browse</a>
-                            </li>
-                            <li class="nav-item me-4">
-                                <a class="nav-link text-white" href="GameLibrary.aspx">Offer</a>
+                                <a class="nav-link text-white" href="GameLibraryTailWind.aspx">Offer</a>
                             </li>
                             <li class="nav-item me-4">
                                 <a class="nav-link text-white" href="AboutUs.aspx">About</a>
-                            </li>
-                            <li class="nav-item me-4">
-                                <a class="nav-link text-white" href="AboutUs.aspx">Contact</a>
                             </li>
                         </ul>
                         

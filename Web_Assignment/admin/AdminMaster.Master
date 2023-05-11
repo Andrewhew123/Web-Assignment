@@ -36,9 +36,9 @@
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Galaxy</span>
 
             </a>
-            <p class="text-base font-medium text-gray-900 dark:text-white m-2">Admin</p>
-            <hr class="h-px m-2 bg-gray-200 border-0 dark:bg-gray-700">
-            <ul class="space-y-2 font-medium">
+            <p class="text-base font-medium text-gray-900 dark:text-white m-2">Admin : 
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </p>
 
                 <!----- Menu option: Dashboard ----->
                 <li>

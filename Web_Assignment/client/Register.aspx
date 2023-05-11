@@ -115,7 +115,7 @@
             </tr>
             <tr>
                 <td class="auto-style14"></td>
-                <td class="auto-style15" id="passwordformat">Password contain minimum 8 characters, incldue 1 letter and 1 number..<br />
+                <td class="auto-style15" id="passwordformat">Password contain minimum 8 characters, incldue 1 letter and 1 number.<br />
                     <asp:RequiredFieldValidator class="errormessage" ID="RequiredFieldValidator5" runat="server" ControlToValidate="passwordtxt" ErrorMessage="Password is required." ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
                     <asp:RegularExpressionValidator class="errormessage" ID="RegularExpressionValidator2" runat="server" ControlToValidate="passwordtxt" ErrorMessage="Please enter valid password format." ForeColor="Red" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"></asp:RegularExpressionValidator>
@@ -144,6 +144,7 @@
                         <asp:ListItem>China</asp:ListItem>
                         <asp:ListItem>Singapore</asp:ListItem>
                         <asp:ListItem>Thailand</asp:ListItem>
+                        <asp:ListItem>Others</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>

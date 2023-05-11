@@ -69,7 +69,7 @@
             <tr>
                 <td class="auto-style4"></td>
                 <td class="auto-style5">
-                    <asp:HyperLink ID="forgetpass" runat="server" class="forget">Forget Password?</asp:HyperLink></td>
+                    <asp:HyperLink ID="forgetpass" runat="server" class="forget" NavigateUrl="~/client/ForgetPassword.aspx">Forget Password?</asp:HyperLink></td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>

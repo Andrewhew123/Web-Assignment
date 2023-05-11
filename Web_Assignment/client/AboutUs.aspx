@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="ClientMaster.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Web_Assignment.client.AboutUs" %>
+﻿<%@ Page Language="C#" MasterPageFile="ClientMasterTailWind.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Web_Assignment.client.AboutUs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="aboutus" runat="Server">
 
@@ -31,13 +31,13 @@
         <div id="flex">
             <div class="about-card">
                 <h2 class="cardtopic">Our Purpose</h2>
-                <div id="polaroid">
+                <div>
                     <img src="../img/aboutus/purpose.png" alt="USER EXPERINCE" width="386" height="265">
-                    <div id="container">
+                    <div >
                         <h3>User Experience</h3>
                     </div>
                 </div>
-                <p id="text2">
+                <p>
                     We believe that the games categories and  paltform performance will provide the 
                     best user experince to everyone.
                 </p>
@@ -45,13 +45,13 @@
 
             <div class="about-card">
                 <h2 class="cardtopic">Our Target</h2>
-                <div id="polaroid">
+                <div>
                     <img src="../img/aboutus/target.png" alt="RELAXABLE" width="386" height="265">
-                    <div id="container">
+                    <div>
                         <h3>Relaxable</h3>
                     </div>
                 </div>
-                <p id="text2">
+                <p>
                     We hope that everyone who using our platform will be able to have the best gaming
                 experience and felt relax in their stressful period.
                 </p>
@@ -65,7 +65,7 @@
                         <h3>Friendly</h3>
                     </div>
                 </div>
-                <p id="text2">
+                <p>
                     We will serve every customer that comes from a different country with different skin colour 
                 who has a mind to buy the games with the most friendly service.
                 </p>

@@ -1,18 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderCartTailwind.aspx.cs" Inherits="Web_Assignment.client.cart" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="ClientMasterTailWind.Master" CodeBehind="OrderCartTailWind.aspx.cs" Inherits="Web_Assignment.client.OrderCartTailWind" %>
 
-<!DOCTYPE html>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<html lang="en" class="bg-zinc-900">
-
-<head runat="server">
-    <title>Cart</title>
-    <!---------- Link to cart CSS ----------->
-    <link href="../css/cart.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <form id="form1" runat="server">
-        
+<asp:Content ContentPlaceHolderID="cart" runat="server">
+    
         <br />
         <!------------------------------ Tailwind ------------------------------>
     <div class="container mx-auto px-10">
@@ -125,7 +114,7 @@
             <!--------------------------------------------------------------------->
 
 
-
+                </div>
             
 
 
@@ -133,6 +122,5 @@
     </div>
      <!--------------------------------------------------------------------->
 
-    </form>
-</body>
-</html>
+
+</asp:Content>

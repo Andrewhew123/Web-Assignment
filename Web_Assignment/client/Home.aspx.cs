@@ -17,7 +17,6 @@ namespace Web_Assignment.client
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 SqlDataAdapter adapter = new SqlDataAdapter("Select * from Product", con);
@@ -27,6 +26,7 @@ namespace Web_Assignment.client
                 RepeaterDisplayProduct.DataBind();
             }
 
+            
         }
 
         protected void RepeaterDisplayProduct_ItemCommand(object source, RepeaterCommandEventArgs e)

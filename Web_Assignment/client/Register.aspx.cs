@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Net.NetworkInformation;
+using System.Reflection;
 
 namespace Web_Assignment.client
 {
@@ -72,7 +73,7 @@ namespace Web_Assignment.client
                     com.Parameters.AddWithValue("@Reg", regiontxt.SelectedItem.ToString());
                     com.Parameters.AddWithValue("@Rol", 1);
 
-                    com.ExecuteNonQuery();
+                    com.ExecuteNonQuery(); 
 
                     Response.Write("<script>alert('" + "Account Seccesfully Registered!" + "')</script>");
                 }

@@ -1,111 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Web_Assignment.client.Product" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="ClientMasterTailWind.Master" CodeBehind="Product.aspx.cs" Inherits="Web_Assignment.client.Product" %>
 
-<!DOCTYPE html>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<html lang="en" class="bg-zinc-900">
+<asp:Content ContentPlaceHolderID="product" runat="server">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-</script>
-    <title>Index
-    </title>
-
-</head>
-
-<body class="text-white" style="color: white;">
-    <div>
-        <div class="navbar bg-black">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="logo.png" class="h-5 w-5" fill="none" viewbox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </label>
-                    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
-                        <li tabindex="0"></li>
-                        <li><a>Browse</a></li>
-                        <li tabindex="0"></li>
-                        <li><a>Offer</a></li>
-                        <li tabindex="0"></li>
-                        <li><a>About</a></li>
-                        <li tabindex="0"></li>
-                        <li><a>Contact</a></li>
-                        <li tabindex="0"></li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="btn btn-ghost normal-case text-xl">
-                        <img src="../img/logo.png" height="50px" width="50px">
-                        &nbsp; Galaxy</a>
-                </div>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li tabindex="0"></li>
-                    <li><a>Browse</a></li>
-                    <li tabindex="0"></li>
-                    <li><a>Offer</a></li>
-                    <li tabindex="0"></li>
-                    <li><a>About</a></li>
-                    <li tabindex="0"></li>
-                    <li><a>Contact</a></li>
-                    <li tabindex="0"></li>
-                </ul>
-            </div>
-            <div class="navbar-end">
-                <div class="flex-none">
-                    <div class="dropdown dropdown-end">
-                        <label tabindex="0" class="btn btn-ghost btn-circle">
-                            <div class="indicator">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 3 22 22" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
-                                <span class="badge badge-sm indicator-item">1</span>
-                            </div>
-                        </label>
-                        <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
-                            <div class="card-body">
-                                <span class="font-bold text-lg">8 Items</span>
-                                <span class="text-info">Subtotal: $999</span>
-                                <div class="card-actions">
-                                    <button class="btn btn-primary btn-block">View cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown dropdown-end">
-                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                            </svg>
-
-                        </label>
-                        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>
-                                <a class="justify-between">Profile
-                 
-                                    <span class="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </br>
     <div>
         <!--- Name Output --->
         <asp:Label ID="txtProductName1" runat="server" Text="" class="text-4xl text-white m-5"></asp:Label>
@@ -150,14 +46,14 @@
             <!----- Product Image Carousel ----->
             <div id="default-carousel" class="relative w-2/4 m-9" data-carousel="slide">
 
-                <img src="../img/mh4.jpg" class="object-none" style="width:100%; height:500px;" alt="...">
+                <asp:Image ID="productImage1" runat="server" Width="100px" Height="500px" />
                 
             </div>
 
             <!----- Product Details ----->
             <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-zinc-900 dark:border-neutral-700 ml-16 mt-7 h-96">
                 <a href="#">
-                    <img class="rounded-t-lg" src="../img/mhlogo.png" alt="" />
+                    <asp:Image ID="productImage2" runat="server" class="rounded-t-lg" />
                 </a>
                 <div class="p-5">
                     <a href="#">
@@ -171,14 +67,20 @@
                     <br /><br />
                     <!--<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 mb-5">RM 199.99</p>-->
                     
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-white-700 dark:focus:ring-blue-800">Add to cart
+                    <asp:LinkButton ID="btnAddCart" runat="server" CssClass="inline-flex items-center px-3 py-2 text-sm font-medium text-center
+                        text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+                        dark:bg-blue-600 dark:hover:bg-white-700 dark:focus:ring-blue-800" OnClick="btnAddCart_Click">
+                        Add to Cart
                         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
-                    </a>
+                    </asp:LinkButton>
                 </div>
             </div>
+
+
         </div>
+        
 
         <!---------- Genre DropDown ---------->
         <div id="accordion-collapse" data-accordion="collapse" class="m-5">
@@ -240,46 +142,5 @@ In Monster Hunter: World, the latest installment in the series, you can enjoy th
 
     </div>
 
-</body>
-</br>
 
-
-<footer class="footer p-10 bg-black text-base-content">
-    <div>
-        <span class="footer-title">Company</span>
-        <a class="link link-hover">About Us</a>
-        <a class="link link-hover">Why Choose Us</a>
-        <a class="link link-hover">Pricing</a>
-        <a class="link link-hover">Testimonial</a>
-    </div>
-    <div>
-        <span class="footer-title">Resources</span>
-        <a class="link link-hover">Privacy Policy</a>
-        <a class="link link-hover">Terms and Conditions</a>
-        <a class="link link-hover">Blog</a>
-        <a class="link link-hover">Contact Us</a>
-    </div>
-    <div>
-        <span class="footer-title">Product</span>
-        <a class="link link-hover">Project Management</a>
-        <a class="link link-hover">Time Tracker</a>
-        <a class="link link-hover">Time Schedule</a>
-        <a class="link link-hover">Lerad Generation</a>
-        <a class="link link-hover">Remote Collaboration</a>
-    </div>
-    <div>
-        <span class="footer-title">Newsletter</span>
-        <div class="form-control w-max">
-            <h1 class="text-2xl">Galaxy</h1>
-            <label class="label">
-                <span class="label-text">Enter your email address</span>
-            </label>
-            <div class="relative">
-                <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" />
-                <button class="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
-            </div>
-        </div>
-    </div>
-</footer>
-
-</html>
+</asp:Content>
