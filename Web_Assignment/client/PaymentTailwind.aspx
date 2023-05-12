@@ -1,18 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PaymentTailwind.aspx.cs" Inherits="Web_Assignment.client.PaymentTailwind" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="ClientMasterTailWind.Master" CodeBehind="PaymentTailwind.aspx.cs" Inherits="Web_Assignment.client.PaymentTailwind" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Payment</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!---------- Link to cart CSS ----------->
-    <!--<link href="../css/payment.css" rel="stylesheet" type="text/css" />-->
-</head>
-<body style="background-image: url('../img/bg-image.jpg'); background-size: cover; background-attachment: fixed;">
-    <form id="form1" runat="server">
+<asp:Content ContentPlaceHolderID="cart" runat="server"></
         
         <br /><br />
 
@@ -73,32 +61,51 @@
                                 <div class="card-body">
                                     <h3 class="text-xl font-bold mb-4">Your Order</h3>
                                     <hr class="border-white">
-                                    <div class="border-2 border-white rounded-lg p-2">
+
+                                    
+                                    <asp:Repeater ID="Repeater1" runat="server">
+                                    <ItemTemplate>
+                                        <div class="border-2 border-white rounded-lg p-2">
                                         <div class="inline-block align-middle">
-                                            <img src="../img/product/dead_space.jpg" alt="Alternate Text" class="w-16 h-20">
+                                            <%--<img src="../img/product/dead_space.jpg" alt="Alternate Text" class="w-16 h-20">--%>
+                                            <asp:Image ID="payProductImage" runat="server" CssClass="w-16 h-20" 
+                                                ImageUrl='<%#"~/img/product/productCover/"+Eval("image")%>'/>
                                         </div>
                                         <div class="inline-block ml-2 align-middle">
-                                            <span class="font-semibold block">Dead Space III</span>
-                                            <span class="block">RM 100.00</span>
+                                            <%--<span class="font-semibold block">Dead Space III</span>--%>
+                                            <asp:Label ID="lblProImg" runat="server" CssClass="font-semibold block" 
+                                                Text='<%#Eval("name") %>'></asp:Label>
+                                            <%--<span class="block">RM 100.00</span>--%>
+                                            <asp:Label ID="lblProPrice" runat="server" CssClass="block" 
+                                                Text='<%# "RM " + Eval("price") %>'></asp:Label>
                                         </div>
                                     </div>
+                                    </ItemTemplate>
+                                    </asp:Repeater>
+                                    
                                     <br>
+
                                     <div class="flex justify-between">
-                                        <p class="font-semibold">Price:</p>
-                                        <p class="text-right">RM 100.00</p>
+                                        <p class="font-semibold">Subtotal:</p>
+                                        <%--<p class="text-right">RM 100.00</p>--%>
+                                        <asp:Label ID="lblFullPrice" runat="server" CssClass="text-right" Text=""></asp:Label>
                                     </div>
                                     <div class="flex justify-between">
                                         <p class="font-semibold">Taxes:</p>
                                         <p class="text-right">Calculate at checkout</p>
                                     </div>
-                                    <div class="flex justify-between">
+                                    <%--<div class="flex justify-between">
                                         <h5 class="font-bold">Subtotal:</h5>
                                         <h5 class="text-right">RM 100.00</h5>
-                                    </div>
+                                    </div>--%>
                                     <br>
 
                                     <div class="text-center">
-                                        <asp:LinkButton ID="btnPay" runat="server" class="btn bg-primary text-white py-3 text-lg w-full bg-indigo-600 hover:bg-indigo-700  shadow-sm text-base" onClick="btnPay_Click">Pay Now</asp:LinkButton>
+                                        <asp:LinkButton ID="btnPay" runat="server" class="btn bg-primary text-white 
+                                            py-3 text-lg w-full bg-indigo-600 hover:bg-indigo-700  
+                                            shadow-sm text-base" onClick="btnPay_Click">
+                                            Pay Now
+                                        </asp:LinkButton>
                                     </div>
                                 </div>
                             </div>
@@ -106,19 +113,9 @@
                     </div>
                 </div>
 
-
-
             </div>
         </div>
 
-       
+</asp:Content>
                 
 
-       
-
-
-
-
-    </form>
-</body>
-</html>

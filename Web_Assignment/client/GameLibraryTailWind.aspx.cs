@@ -18,15 +18,15 @@ namespace Web_Assignment.client
             if (!IsPostBack)
             {
                 displayOwnGame();
+                // order cart lazy to check whether the user got buy the product before or not
+                // here to check and display only once if there is the same product
             }
         }
 
         protected void displayOwnGame()
         {
             SqlConnection con = new SqlConnection(strCon);
-            //select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '" + Request.QueryString["id"] + "')
-            //select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '7df4f68c-1f12-456e-b745-e3afc70184a9')
-            string strSelect = "select * from Product p where p.productId IN(select c.productId from Cart c where c.userId= '7df4f68c-1f12-456e-b745-e3afc70184a9')";
+            string strSelect = "select * from Product p where p.productId IN(select o.productId from Order c where c.userId= '" + Session["UserId"] + "')";
             SqlDataAdapter sda = new SqlDataAdapter(strSelect, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);

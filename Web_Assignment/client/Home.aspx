@@ -28,9 +28,10 @@
                     <div class="carousel-item">
                         <div class="card w-96 glass">
                             <figure>
-                                <img src="../img/mh.jpg" alt='<%#Eval("name") %>' style="width: 300px; height: 300px;" />
+                                <!--<img src="../img/mh.jpg" style="width: 300px; height: 300px;" />-->
+                                <asp:Image ID="Image1" runat="server" style="width: 300px; height: 300px;" alt='<%#Eval("name") %>' ImageUrl='<%#"~/img/product/productCover/"+Eval("image")%>'  />
                             </figure>
-                            <div class="card-body">
+                            <div class="card-body text-white">
                                 <h2 class="card-title"><%#Eval("name") %></h2>
                                 <p><%#Eval("description") %></p>
                                 <div class="card-actions justify-end">

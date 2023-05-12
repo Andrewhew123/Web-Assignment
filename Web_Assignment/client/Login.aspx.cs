@@ -31,10 +31,18 @@ namespace Web_Assignment.client
                 string checkpassword = "select password from [User] where username='" + enterusername.Text + "'";
                 SqlCommand passcom = new SqlCommand(checkpassword, con);
                 string password = passcom.ExecuteScalar().ToString().Replace(" ","");
-                con.Close();
 
                 if (password == enterpassword.Text)
                 {
+                    string getUserId = "select userId from [User] where username='" + enterusername.Text + "'";
+                    SqlCommand uid = new SqlCommand(getUserId, con);
+                    SqlDataReader rdr = uid.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        Session["UserId"] = rdr["userId"].ToString();
+                    }
+
                     Session["UserName"] = enterusername.Text;
                     if (enterusername.Text == "zhongren")
                     {
@@ -66,6 +74,8 @@ namespace Web_Assignment.client
             {
                 incorrect.Text = "Username or Password is incorrect.";
             }
+
+            con.Close();
         }
 
             

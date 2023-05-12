@@ -38,7 +38,7 @@ namespace Web_Assignment.client
 
                 while (dr.Read())
                 {
-                    string imagePath = "img/product/productCover/" + dr.GetValue(0).ToString(); // Replace with the actual image path
+                    string imagePath = "../img/product/productCover/" + dr.GetValue(0).ToString(); // Replace with the actual image path
                     productImage1.ImageUrl = imagePath;
                     productImage2.ImageUrl = imagePath;
 
@@ -58,20 +58,22 @@ namespace Web_Assignment.client
         protected void btnAddCart_Click(object sender, EventArgs e)
         {
             String productID = Request.QueryString["id"];
+            string userId = (string)Session["UserId"];
 
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 con.Open();
                 //SQL Statement
 
-                string strAddCart = "insert into Cart (productId, userId) values('" + productID + "', '7df4f68c-1f12-456e-b745-e3afc70184a9')";
-                string getCartData = "SELECT * FROM Cart WHERE productId = @productId";
+                string strAddCart = "insert into Cart (productId, userId) values('" + productID + "', '"+ Session["UserId"]+ "')";
+                string getCartData = "SELECT * FROM Cart WHERE productId = @productId AND userId = @userId";
 
                 //Need sqlcommand to execute sql query
                 SqlCommand cmd = new SqlCommand(strAddCart, con);
 
                 SqlCommand command = new SqlCommand(getCartData, con);
                 command.Parameters.AddWithValue("@productId", productID);
+                command.Parameters.AddWithValue("@userId", userId);
                 SqlDataReader reader = command.ExecuteReader();
 
                 //Validation

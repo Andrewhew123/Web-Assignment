@@ -47,6 +47,7 @@ namespace Web_Assignment.client
             {
                 message.Text = "Invalid username or email! Please try again!";
             }
+            con.Close();
         }
     }
 }

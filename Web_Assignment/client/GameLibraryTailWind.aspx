@@ -32,7 +32,7 @@
                             <img class="rounded-t-lg mx-auto" src="../img/product/dead_space.jpg" alt="" style="height: 200px"/>
                         </a>--%>
                         <asp:Image ID="Image1" runat="server" CssClass="rounded-t-lg mx-auto" style="height: 200px" 
-                            ImageUrl='<%#"~/img/product/"+Eval("image")%>'/>
+                            ImageUrl='<%#"~/img/product/productCover/"+Eval("image")%>'/>
                         <div class="p-5">
                             <%--<a href="#">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Dead Space III</h5>

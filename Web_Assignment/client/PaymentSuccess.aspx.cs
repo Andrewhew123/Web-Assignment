@@ -19,6 +19,8 @@ namespace Web_Assignment.client
             if (!IsPostBack)
             {
                 InsertData();
+                ClearCart();
+                Response.Redirect("~/client/GameLibraryTailWind.aspx");
             }
             //string email = Session["user"].ToString();
             // Get user data from the database
@@ -82,16 +84,17 @@ namespace Web_Assignment.client
                 Guid newGuid = Guid.NewGuid();
                 //SQL Statement
                 string strAddOrder = "insert into [dbo].[Order] (orderDate, userID, amount) values (@orderDate, @userId, @amount)";
+                decimal temp;
+                Decimal.TryParse(Session["finaltotal"].ToString(), out temp);
 
                 //Need sqlcommand to execute sql query
                 SqlCommand cmd = new SqlCommand(strAddOrder, con);
                 cmd.Parameters.AddWithValue("@orderDate", DateTime.Now);
-                cmd.Parameters.AddWithValue("@userId", "bbbc21d4-1f38-4329-bc2c-52f0744da1f1");
-                cmd.Parameters.AddWithValue("@amount", 10.00);
+                cmd.Parameters.AddWithValue("@userId", Session["UserId"].ToString());
+                cmd.Parameters.AddWithValue("@amount", temp);
                 int rowAffected = cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Success')</script>");
-
             }
 
         }
@@ -178,6 +181,19 @@ namespace Web_Assignment.client
             }
         }
 
+        protected void ClearCart()
+        {
+            SqlConnection con = new SqlConnection(strCon);
+
+            string strSelect = "DELETE FROM Cart WHERE userId = '" + Session["UserId"] + "'";
+
+            SqlCommand cmd = new SqlCommand(strSelect, con);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
 
     }
 }

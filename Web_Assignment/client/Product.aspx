@@ -46,14 +46,14 @@
             <!----- Product Image Carousel ----->
             <div id="default-carousel" class="relative w-2/4 m-9" data-carousel="slide">
 
-                <asp:Image ID="productImage1" runat="server" Width="100px" Height="500px" />
+                <asp:Image ID="productImage1" runat="server" class="object-none" style="width:100%; height:500px;" alt="..." />
                 
             </div>
 
             <!----- Product Details ----->
             <div class="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-zinc-900 dark:border-neutral-700 ml-16 mt-7 h-96">
                 <a href="#">
-                    <asp:Image ID="productImage2" runat="server" class="rounded-t-lg" />
+                    <asp:Image ID="productImage2" runat="server" class="rounded-t-lg" Width="150px" Height="100px" />
                 </a>
                 <div class="p-5">
                     <a href="#">

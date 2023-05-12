@@ -19,10 +19,11 @@ namespace Web_Assignment.client
             //int nrow = dt.Rows.Count;
             int i = 0;
             int orderId = 0001;
-            decimal totalprice = 100;
-            decimal finaltotal = 100;
+            decimal totalprice = 0;
+            decimal finaltotal = 0;
             string orderNumber;
 
+            Decimal.TryParse(Session["buyTotal"].ToString(), out totalprice);
             //while (i < nrow)
             //{
             //    totalprice = totalprice + Convert.ToDecimal(dt.Rows[i]["totalprice"].ToString());
@@ -34,7 +35,7 @@ namespace Web_Assignment.client
             string finalTotalFormatted = finaltotal.ToString("0.00");
             Session["finaltotal"] = finalTotalFormatted.ToString();
 
-            string mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Galaxy.mdf;Integrated Security=True;";
+            /*string mycon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Galaxy.mdf;Integrated Security=True;";
             SqlConnection scon = new SqlConnection(mycon);
             string myquery = "SELECT MAX(orderId) FROM [Order]";
             SqlCommand cmd = new SqlCommand(myquery, scon);
@@ -46,7 +47,7 @@ namespace Web_Assignment.client
                 orderId = Convert.ToInt32(result);
             }
             orderId++; // Increment the order ID for the next order
-            scon.Close();
+            scon.Close();*/
 
             //here we implement Paypal
             Session["orderId"] = orderId.ToString();
